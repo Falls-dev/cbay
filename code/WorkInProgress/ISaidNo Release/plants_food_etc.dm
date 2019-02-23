@@ -1298,8 +1298,6 @@
 	desc = "A bloody burger."
 	icon_state = "burger"
 	heal(var/mob/M)
-		if(src.job == "Clown")
-			M.unlock_medal("That Tasted Funny", 1)
 		..()
 
 /obj/item/weapon/reagent_containers/food/snacks/burger/monkeyburger

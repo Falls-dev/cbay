@@ -430,5 +430,4 @@
 			text += "[head_mind.key] (character destroyed)"
 
 		world << text
-	check_round()
 	return 1

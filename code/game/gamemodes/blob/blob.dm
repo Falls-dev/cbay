@@ -161,7 +161,6 @@
 				log_game("AI lost at Blob mode.")
 
 		log_game("Blob mode was lost.")
-		check_round()
 		return 1
 
 	else
@@ -178,5 +177,4 @@
 		log_game("Blob mode was won with station [percent]% intact.")
 
 		world << "\blue Rebooting in 30s"
-		check_round()
 	return 1

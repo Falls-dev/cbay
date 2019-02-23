@@ -21,6 +21,10 @@
 		return
 	else if(istype(src, /turf/simulated/wall/r_wall))
 		src.icon_state = "rwall[junction]"
+	else if(istype(src, /turf/simulated/wall/b_wall))
+		src.icon_state = "bwall[junction]"
+	else if(istype(src, /turf/simulated/wall/dark_wall))
+		src.icon_state = "bwall[junction]"
 	else
 		src.icon_state = "wall[junction]"
 

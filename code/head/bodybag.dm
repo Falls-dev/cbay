@@ -29,7 +29,6 @@ obj/bodybag
 		for(var/mob/M in viewers(null, src))
 			M << text("<FONT size=[]>The bodybag writhes!</FONT>", max(0, 4 - get_dist(src, M)))
 
-		user.unlock_medal("It's a trap!", 0, "Get locked or welded into a locker...", "easy")
 		writhe_time = world.timeofday
 
 		return

@@ -161,6 +161,7 @@
 
 	using = new h_type( src )
 	using.name = "act_intent"
+	using.icon = 'icons/mob/cyberint.dmi'
 	using.dir = SOUTHWEST
 	using.icon_state = (mymob.a_intent == "hurt" ? "harm" : mymob.a_intent)
 	using.screen_loc = ui_acti
@@ -178,11 +179,17 @@
 	move_intent = using
 
 	using = new h_type(src) //Right hud bar
-	using.dir = SOUTH
+	using.dir = WEST
 	using.screen_loc = "EAST+1,SOUTH to EAST+1,NORTH"
 	using.layer = 19
 	adding += using
 
+	using = new h_type(src) //Left hud bar
+	using.icon = 'icons/mob/cyberscreen.dmi'
+	using.screen_loc = ui_cyberscreen
+	using.layer = 19
+	adding += using
+/*
 	using = new h_type(src) //Lower hud bar
 	using.dir = EAST
 	using.screen_loc = "WEST,SOUTH-1 to EAST,SOUTH-1"
@@ -210,8 +217,9 @@
 	using.screen_loc = ui_iarrowright
 	using.layer = 19
 	adding += using
-
+*/
 	using = new h_type( src )
+	using.icon = 'icons/mob/cybertd.dmi'
 	using.name = "drop"
 	using.icon_state = "act_drop"
 	using.screen_loc = ui_dropbutton
@@ -305,20 +313,14 @@
 	using.layer = 19
 	src.other += using
 
-	using = new src.h_type( src )
-	using.name = "hat storage"
-	//using.icon = ui_style
-	using.icon_state = "hat_slot"
-	using.screen_loc = ui_hstore1
-	using.layer = 19
-	src.other += using
-
 	using = new h_type( src )
 	using.name = "resist"
 	using.icon_state = "act_resist"
 	using.screen_loc = ui_resist
 	using.layer = 19
 	adding += using
+
+/*
 
 	using = new h_type( src )
 	using.name = "other"
@@ -327,7 +329,6 @@
 	using.layer = 20
 	adding += using
 
-/*
 	using = new h_type( src )
 	using.name = "intent"
 	using.icon_state = "intent"
@@ -468,6 +469,7 @@
 	vimpaired += using
 
 	mymob.throw_icon = new /obj/screen(null)
+	mymob.throw_icon.icon = 'icons/mob/cybertd.dmi'
 	mymob.throw_icon.icon_state = "act_throw_off"
 	mymob.throw_icon.name = "throw"
 	mymob.throw_icon.screen_loc = ui_throw

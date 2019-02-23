@@ -41,7 +41,6 @@
 			if(broken == 0)
 				var/dmgmsg = "[damage_msg] in your [display_name]"
 				owner << dmgmsg
-				owner.unlock_medal("Broke Yarrr Bones!", 1)
 				for(var/mob/M in viewers(owner))
 					if(M != owner)
 						M.show_message("\red You hear a loud cracking sound coming from [owner.name].")
@@ -219,7 +218,6 @@
 	if(destroyed)
 		if(destroyed)
 			if(destroyed)
-				owner.unlock_medal("Lost something?", 1)
 				if(name == "chest")
 					owner.gib()
 				if(name == "head")

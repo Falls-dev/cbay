@@ -1,43 +1,54 @@
+//LEFT UI
 
-#define ui_dropbutton "SOUTH-1,7"
-#define ui_swapbutton "SOUTH-1,7"
-#define ui_iclothing "SOUTH-1,2"
-#define ui_oclothing "SOUTH,2"
-//#define ui_headset "SOUTH,8"
-#define ui_rhand "SOUTH,1"
-#define ui_lhand "SOUTH,3"
-#define ui_id "SOUTH-1,1"
-#define ui_mask "SOUTH+1,1"
-#define ui_back "SOUTH+1,3"
-#define ui_storage1 "SOUTH-1,4"
-#define ui_storage2 "SOUTH-1,5"
-#define ui_sstore1 "SOUTH+1,4"
-#define ui_hstore1 "SOUTH+1,5"
-#define ui_resist "EAST+1,SOUTH-1"
-#define ui_gloves "SOUTH,5"
-#define ui_glasses "SOUTH,7"
-#define ui_ears "SOUTH,6"
-#define ui_head "SOUTH+1,2"
-#define ui_shoes "SOUTH,4"
-#define ui_belt "SOUTH-1,3"
-#define ui_throw "SOUTH-1,8"
-#define ui_oxygen "EAST+1, NORTH-4"
-#define ui_toxin "EAST+1, NORTH-6"
-#define ui_internal "EAST+1, NORTH-2"
-#define ui_fire "EAST+1, NORTH-8"
-#define ui_temp "EAST+1, NORTH-10"
-#define ui_health "EAST+1, NORTH-11"
-#define ui_pull "SOUTH-1,10"
-#define ui_hand "SOUTH-1,6"
-#define ui_sleep "EAST+1, NORTH-13"
-#define ui_rest "EAST+1, NORTH-14"
+//LEFT SIDE
 
-#define ui_acti "SOUTH-1,12"
-#define ui_movi "SOUTH-1,14"
+#define ui_ears 	 "-1.9, NORTH-1.5"
+#define ui_back 	 "-1.9, NORTH-2.5"
+#define ui_rhand 	 "-1.9, NORTH-3.5"
+#define ui_gloves 	 "-1.9, NORTH-4.5"
+#define ui_storage1  "-1.9, NORTH-5.5"
 
-#define ui_iarrowleft "SOUTH-1,11"
-#define ui_iarrowright "SOUTH-1,13"
+//CENTRAL SIDE
 
+#define ui_head 	 "-1, NORTH-1"
+#define ui_mask 	 "-1, NORTH-2"
+#define ui_hand 	 "-1, NORTH-3"
+#define ui_oclothing "-1, NORTH-4"
+#define ui_iclothing "-1, NORTH-5"
+#define ui_belt 	 "-1, NORTH-6"
+#define ui_shoes 	 "-1, NORTH-7"
+#define ui_acti 	 "-1.12, NORTH-8.02"
+#define ui_pull 	 "-1, NORTH-13"
+
+//RIGHT SIDE
+
+#define ui_glasses   "-0.1,  NORTH-1.5"
+#define ui_lhand 	 "-0.1,  NORTH-3.5"
+#define ui_sstore1 	 "-0.1,  NORTH-4.5"
+#define ui_storage2  "-0.1,  NORTH-5.5"
+#define ui_id 		 "-0.1,  NORTH-6.5"
+
+#define ui_throw 	  "-0.25, NORTH-6.95"
+#define ui_swapbutton "-0.25, NORTH-7.55"
+#define ui_dropbutton "-0.25, NORTH-7.55"
+
+//RIGHT UI
+#define ui_resist 	  "EAST+1, NORTH-14"
+#define ui_sleep 	  "EAST+1, NORTH-13"
+#define ui_health     "EAST+1, NORTH-11"
+#define ui_temp       "EAST+1, NORTH-10"
+#define ui_rest       "EAST+1, NORTH-9"
+#define ui_fire       "EAST+1, NORTH-8"
+#define ui_movi       "EAST+1, NORTH-7"
+#define ui_toxin      "EAST+1, NORTH-6"
+#define ui_oxygen     "EAST+1, NORTH-4"
+#define ui_internal   "EAST+1, NORTH-2"
+
+#define ui_cyberscreen "-2, SOUTH"
+
+/*
+#define ui_hstore1 	 "5, NORTH-2"
+*/
 
 /*
 //TESTING A LAYOUT
@@ -117,7 +128,6 @@ obj/hud/New()
 		if(mymob:gloves) mymob:gloves:screen_loc = ui_gloves
 		if(mymob:ears) mymob:ears:screen_loc = ui_ears
 		if(mymob:s_store) mymob:s_store:screen_loc = ui_sstore1
-		if(mymob:h_store) mymob:h_store:screen_loc = ui_hstore1
 		if(mymob:glasses) mymob:glasses:screen_loc = ui_glasses
 	else
 		if(mymob:shoes) mymob:shoes:screen_loc = null

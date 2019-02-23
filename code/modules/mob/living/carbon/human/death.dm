@@ -17,10 +17,6 @@
 	stat = 2
 	dizziness = 0
 	jitteriness = 0
-	if(!suiciding)
-		unlock_medal("Downsizing", 1)
-	else
-		unlock_medal("I can't take it anymore!", 1)
 	if (!gibbed)
 		emote("deathgasp") //let the world KNOW WE ARE DEAD
 

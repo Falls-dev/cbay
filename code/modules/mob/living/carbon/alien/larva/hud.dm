@@ -89,7 +89,7 @@
 	using.screen_loc = "EAST+1,SOUTH-1"
 	using.layer = 19
 	adding += using
-
+/*
 	using = new h_type( src )
 	using.name = "arrowleft"
 	using.icon = 'icons/mob/screen1_alien.dmi'
@@ -107,7 +107,7 @@
 	using.screen_loc = ui_iarrowright
 	using.layer = 19
 	adding += using
-
+*/
 
 	using = new h_type( src )
 	using.name = "resist"

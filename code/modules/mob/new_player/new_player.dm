@@ -21,7 +21,6 @@ mob/new_player
 		..()
 		src.verbs += /mob/new_player/proc/forcestart
 		//unlock_medal("First Timer", 0, "Welcome!", "easy")
-		world.newborn_medal(src)
 
 		if(!preferences)
 			preferences = new
@@ -30,11 +29,11 @@ mob/new_player
 			mind = new
 			mind.key = key
 			mind.current = src
-		if (join_motd)
-			src.client.showmotd()
+		//if (join_motd)
+		//	src.client.showmotd()
 		spawn(25)
 			new_player_panel()
-		src << "<b>We now have <a href='http://whoopshop.com/index.php/topic,1632.0.html'>guidelines</a>. Read them before playing or fear the wrath of the banhammer!"
+		//src << "<b>We now have <a href='http://whoopshop.com/index.php/topic,1632.0.html'>guidelines</a>. Read them before playing or fear the wrath of the banhammer!"
 		var/starting_loc = pick(newplayer_start)
 		loc = starting_loc
 		sight |= SEE_TURFS
@@ -49,7 +48,7 @@ mob/new_player
 		if(!preferences.savefile_load(src,0,1))
 			preferences.ShowChoices(src)
 
-		startup = sound('sound/server/lobby_music.ogg', volume = 40)
+		startup = _SoundEngine('sound/server/lobby.ogg', src, range=7, repeat=1, volume=10)
 		spawn(25)
 			src << startup
 
@@ -65,18 +64,13 @@ mob/new_player
 		new_player_panel()
 			set src = usr
 
-			var/output = "<HR><B>New Player Options</B><BR><HR>"
-			var/readiness
-			if(ready) readiness = "<B>READY</B>"
-			else readiness = "<B>NOT READY</B>"
-			output += "STATUS: [readiness]<br>"
-			output += "<br><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A><BR><BR>"
+			var/output = "<br><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A><BR><BR>"
 			//if(istester(key))
 			if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 				if(!ready)
-					output += "<a href='byond://?src=\ref[src];ready=1'>Declare Ready</A><BR>"
+					output += "<a href='byond://?src=\ref[src];ready=1'>Не готов</A><BR>"
 				else
-					output += "<a href='byond://?src=\ref[src];ready=0'>Undeclare Ready</A><BR>"
+					output += "<a href='byond://?src=\ref[src];ready=0'>Готов</A><BR>"
 			else
 				output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><BR><BR>"
 				output += "<a href='byond://?src=\ref[src];late_join=1'>Join Game!</A><BR>"
@@ -84,9 +78,9 @@ mob/new_player
 			output += "<BR><a href='byond://?src=\ref[src];observe=1'>Observe</A><BR>"
 
 			if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-				src << browse(output,"window=playersetup;size=250x233;can_close=0")
+				src << browse(output,"window=playersetup;size=600x400;can_close=0")
 			else
-				src << browse(output,"window=playersetup;size=250x233;can_close=0") // Adding the "View the Crew Manifest" option to the size of the window
+				src << browse(output,"window=playersetup;size=600x400;can_close=0") // Adding the "View the Crew Manifest" option to the size of the window
 				// A nice interface makes for an appealing game :D
 	Stat()
 		..()
@@ -120,11 +114,11 @@ mob/new_player
 					return
 
 			if(!ready)
-				if(alert(src,"Are you sure want to be ready? This will lock-in your preferences.","Player Setup","Yes","No") == "Yes")
-					ready = 1
+				//if(alert(src,"Are you sure want to be ready? This will lock-in your preferences.","Player Setup","Yes","No") == "Yes")
+				ready = 1
 			else if(ready)
-				if(alert(src,"Are you dont want to be ready? This will un-lock your preferences.","Player Setup","Yes","No") == "Yes")
-					ready = 0
+				//if(alert(src,"Are you dont want to be ready? This will un-lock your preferences.","Player Setup","Yes","No") == "Yes")
+				ready = 0
 
 		if(href_list["observe"])
 			if(alert(src,"Are you sure you wish to observe? You will not be able to play this round!","Player Setup","Yes","No") == "Yes")

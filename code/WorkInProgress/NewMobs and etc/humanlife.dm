@@ -333,7 +333,6 @@
 				toxloss = 100
 		else if(lol <= 122)
 			death()
-			src.unlock_medal("We're all sold out on blood", 1)
 	if (eye_blind)
 		eye_blind--
 		blinded = 1
