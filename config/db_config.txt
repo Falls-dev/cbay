@@ -1,10 +1,10 @@
 # айпи и порт бд
-db_server	127.0.0.1
+db_server	localhost
 db_port		3306
 
 # учетные данные бд
-db_user		user
-db_password	defuser
+db_user root
+db_password anime
 
 # имя бд
 db_dbname	gavno
