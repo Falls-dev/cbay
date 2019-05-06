@@ -1,6 +1,6 @@
 /obj/portal
 	name = "portal"
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'ICON/obj/stationobjs.dmi'
 	icon_state = "portal"
 	density = 1
 	var/failchance = 4

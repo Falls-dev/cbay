@@ -1,7 +1,7 @@
 obj/machinery/aiconstruct
 	name = "AI CONSTRUCT"
 	var/buildstate = 0
-	icon = 'icons/mob/mob.dmi'
+	icon = 'ICON/mob/mob.dmi'
 	icon_state = "ai_new0"
 	var/mob/bb
 obj/machinery/aiconstruct/attack_hand(mob/user)
@@ -94,7 +94,7 @@ obj/machinery/aiconstruct/proc/boot()
 		A.key = bb.client.key
 		bb.mind.transfer_to(A)
 		sleep(10)
-		A << 'sound/machines/chime.ogg'
+		A << 'OGGS/machines/chime.ogg'
 		roundinfo.revies++
 		log_admin("Starting AI construct (2/3)")
 		A.AIize()

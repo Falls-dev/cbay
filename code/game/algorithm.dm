@@ -1,22 +1,6 @@
 /world/New()
 	..()
 
-	//
-
-	diary = file("data/logs/[time2text(world.realtime, "YYYY/MM-Month/DD-Day")].log")
-	diary << ""
-	diary << ""
-	diary << "Starting up. [time2text(world.timeofday, "hh:mm.ss")]"
-	diary << "---------------------"
-	diary << ""
-
-	//jobban_loadbanfile()
-	//jobban_updatelegacybans()
-
-	//invite_loadbanfile()
-
-//	beta_tester_loadfile()
-
 	setuptitles()
 	spawn
 		SetupAnomalies()

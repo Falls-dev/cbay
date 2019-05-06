@@ -4,9 +4,9 @@
 *.dmb
 *.lk
 info.json
-/config/admins.txt
-/config/moderators.txt
-/config/db_config.txt
+/CONF/admins.txt
+/CONF/moderators.txt
+/CONF/db_config.txt
 /statistics
 /deletions
 /data/logs

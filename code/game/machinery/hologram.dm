@@ -1,6 +1,6 @@
 /obj/machinery/hologram_ai
 	name = "Hologram Projector Platform"
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'ICON/obj/stationobjs.dmi'
 	icon_state = "hologram0"
 	var/atom/projection = null
 	var/temp = null
@@ -22,22 +22,22 @@
 	return
 
 /obj/machinery/hologram_ai/proc/render()
-	var/icon/I = new /icon('icons/mob/human.dmi', "body_m_s")
+	var/icon/I = new /icon('ICON/mob/human.dmi', "body_m_s")
 
 	if (src.lumens >= 0)
 		I.Blend(rgb(src.lumens, src.lumens, src.lumens), ICON_ADD)
 	else
 		I.Blend(rgb(- src.lumens,  -src.lumens,  -src.lumens), ICON_SUBTRACT)
 
-	I.Blend(new /icon('icons/mob/human.dmi', "mouth_m_s"), ICON_OVERLAY)
-	I.Blend(new /icon('icons/mob/human.dmi', "underwear1_m_s"), ICON_OVERLAY)
+	I.Blend(new /icon('ICON/mob/human.dmi', "mouth_m_s"), ICON_OVERLAY)
+	I.Blend(new /icon('ICON/mob/human.dmi', "underwear1_m_s"), ICON_OVERLAY)
 
-	var/icon/U = new /icon('icons/mob/human_face.dmi', "hair_a_s")
+	var/icon/U = new /icon('ICON/mob/human_face.dmi', "hair_a_s")
 	U.Blend(rgb(src.h_r, src.h_g, src.h_b), ICON_ADD)
 
 	I.Blend(U, ICON_OVERLAY)
 
-	I.Blend(new /icon('icons/mob/uniform.dmi', "aqua_s"), ICON_OVERLAY)
+	I.Blend(new /icon('ICON/mob/uniform.dmi', "aqua_s"), ICON_OVERLAY)
 
 	src.projection.icon = I
 
@@ -68,7 +68,7 @@
 			del(src.projection)
 		else
 			src.projection = new /obj/projection( src.loc )
-			src.projection.icon = 'icons/mob/human.dmi'
+			src.projection.icon = 'ICON/mob/human.dmi'
 			src.projection.icon_state = "male"
 			if(istype(src, /obj/machinery/hologram_ai/wall_projector))
 				src.icon_state = "wall_hologram1"

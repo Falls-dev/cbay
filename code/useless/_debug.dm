@@ -43,13 +43,13 @@ Doing this because FindTurfs() isn't even used
 				for(var/atom/U in OM.FindTurfs() )
 					var/dirn = get_dir(OM, U)
 					if(dirn == 1)
-						O.overlayss += image('icons/misc/mark.dmi', OM.airdir==1?"up":"fup")
+						O.overlayss += image('ICON/misc/mark.dmi', OM.airdir==1?"up":"fup")
 					else if(dirn == 2)
-						O.overlayss += image('icons/misc/mark.dmi', OM.airdir==2?"dn":"fdn")
+						O.overlayss += image('ICON/misc/mark.dmi', OM.airdir==2?"dn":"fdn")
 					else if(dirn == 4)
-						O.overlayss += image('icons/misc/mark.dmi', OM.airdir==4?"rt":"frt")
+						O.overlayss += image('ICON/misc/mark.dmi', OM.airdir==4?"rt":"frt")
 					else if(dirn == 8)
-						O.overlayss += image('icons/misc/mark.dmi', OM.airdir==8?"lf":"flf")
+						O.overlayss += image('ICON/misc/mark.dmi', OM.airdir==8?"lf":"flf")
 */
 			else
 
@@ -59,29 +59,29 @@ Doing this because FindTurfs() isn't even used
 					O.icon_state = "blank"
 
 				if(T.airN)
-					O.overlayss += image('icons/misc/mark.dmi', T.airdir==1?"up":"fup")
+					O.overlayss += image('ICON/misc/mark.dmi', T.airdir==1?"up":"fup")
 
 				if(T.airS)
-					O.overlayss += image('icons/misc/mark.dmi', T.airdir==2?"dn":"fdn")
+					O.overlayss += image('ICON/misc/mark.dmi', T.airdir==2?"dn":"fdn")
 
 				if(T.airW)
-					O.overlayss += image('icons/misc/mark.dmi', T.airdir==8?"lf":"flf")
+					O.overlayss += image('ICON/misc/mark.dmi', T.airdir==8?"lf":"flf")
 
 				if(T.airE)
-					O.overlayss += image('icons/misc/mark.dmi', T.airdir==4?"rt":"frt")
+					O.overlayss += image('ICON/misc/mark.dmi', T.airdir==4?"rt":"frt")
 
 
 				if(T.condN)
-					O.overlayss += image('icons/misc/mark.dmi', T.condN == 1?"yup":"rup")
+					O.overlayss += image('ICON/misc/mark.dmi', T.condN == 1?"yup":"rup")
 
 				if(T.condS)
-					O.overlayss += image('icons/misc/mark.dmi', T.condS == 1?"ydn":"rdn")
+					O.overlayss += image('ICON/misc/mark.dmi', T.condS == 1?"ydn":"rdn")
 
 				if(T.condE)
-					O.overlayss += image('icons/misc/mark.dmi', T.condE == 1?"yrt":"rrt")
+					O.overlayss += image('ICON/misc/mark.dmi', T.condE == 1?"yrt":"rrt")
 
 				if(T.condW)
-					O.overlayss += image('icons/misc/mark.dmi', T.condW == 1?"ylf":"rlf")
+					O.overlayss += image('ICON/misc/mark.dmi', T.condW == 1?"ylf":"rlf")
 	else
 		alert("Debugging off")
 		return
@@ -98,7 +98,7 @@ Doing this because FindTurfs() isn't even used
 
 /proc/numbericon(var/tn as text,var/s = 0)
 	if(Debug)
-		var/image/I = image('icons/misc/mark.dmi', "blank")
+		var/image/I = image('ICON/misc/mark.dmi', "blank")
 
 		if(lentext(tn)>8)
 			tn = "*"
@@ -113,7 +113,7 @@ Doing this because FindTurfs() isn't even used
 			if(char == " ")
 				continue
 
-			var/image/ID = image('icons/misc/mark.dmi', char)
+			var/image/ID = image('ICON/misc/mark.dmi', char)
 
 			ID.pixel_x = -(d-1)*4
 			ID.pixel_y = s
@@ -431,41 +431,6 @@ Doing this because FindTurfs() isn't even used
 		alert("Debugging off")
 		return
 
-
-/*/mob/verb/air()
-	set category = "Debug"
-
-	Air()
-
-/proc/Air()
-
-
-	var/area/A = locate(/area/airintake)
-
-	var/atot = 0
-	for(var/turf/T in A)
-		atot += T.tot_gas()
-
-	var/ptot = 0
-	for(var/obj/machinery/pipeline/PL in plines)
-		if(PL.suffix == "d")
-			ptot += PL.ngas.tot_gas()
-
-	var/vtot = 0
-	for(var/obj/machinery/atmoalter/V in machines)
-		if(V.suffix == "d")
-			vtot += V.gas.tot_gas()
-
-	var/ctot = 0
-	for(var/obj/machinery/connector/C in machines)
-		if(C.suffix == "d")
-			ctot += C.ngas.tot_gas()
-
-
-	var/tot = atot + ptot + vtot + ctot
-
-	diary << "A=[num2text(atot,10)] P=[num2text(ptot,10)] V=[num2text(vtot,10)] C=[num2text(ctot,10)] :  Total=[num2text(tot,10)]"
-*/
 /mob/verb/Revive()
 	set category = "Debug"
 	if(Debug)
@@ -606,6 +571,6 @@ Doing this because FindTurfs() isn't even used
 	world << "[usr.key] created an explosion"
 	var/obj/item/weapon/tank/plasmatank/pt = new /obj/item/weapon/tank/plasmatank( T )
 	playsound(pt.loc, "explosion", 100, 1,3)
-	playsound(pt.loc, 'sound/effects/explosionfar.ogg', 100, 1,10)
+	playsound(pt.loc, 'OGGS/effects/explosionfar.ogg', 100, 1,10)
 	pt.gas.temperature = 500+T0C
 	pt.ignite()

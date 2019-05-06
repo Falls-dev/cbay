@@ -2,13 +2,13 @@
 	//Frequency stuff only works with 45kbps oggs.
 
 	switch(soundin)
-		if ("shatter") soundin = pick('sound/effects/Glassbr1.ogg','sound/effects/Glassbr2.ogg','sound/effects/Glassbr3.ogg')
-		if ("explosion") soundin = pick('sound/effects/Explosion1.ogg','sound/effects/Explosion2.ogg')
-		if ("sparks") soundin = pick('sound/effects/sparks1.ogg','sound/effects/sparks2.ogg','sound/effects/sparks3.ogg','sound/effects/sparks4.ogg')
-		if ("rustle") soundin = pick('sound/misc/rustle1.ogg','sound/misc/rustle2.ogg','sound/misc/rustle3.ogg','sound/misc/rustle4.ogg','sound/misc/rustle5.ogg')
-		if ("punch") soundin = pick('sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg')
-		if ("clownstep") soundin = pick('sound/misc/clownstep1.ogg','sound/misc/clownstep2.ogg')
-		if ("swing_hit") soundin = pick('sound/weapons/genhit1.ogg', 'sound/weapons/genhit2.ogg', 'sound/weapons/genhit3.ogg')
+		if ("shatter") soundin = pick('OGGS/effects/Glassbr1.ogg','OGGS/effects/Glassbr2.ogg','OGGS/effects/Glassbr3.ogg')
+		if ("explosion") soundin = pick('OGGS/effects/Explosion1.ogg','OGGS/effects/Explosion2.ogg')
+		if ("sparks") soundin = pick('OGGS/effects/sparks1.ogg','OGGS/effects/sparks2.ogg','OGGS/effects/sparks3.ogg','OGGS/effects/sparks4.ogg')
+		if ("rustle") soundin = pick('OGGS/misc/rustle1.ogg','OGGS/misc/rustle2.ogg','OGGS/misc/rustle3.ogg','OGGS/misc/rustle4.ogg','OGGS/misc/rustle5.ogg')
+		if ("punch") soundin = pick('OGGS/weapons/punch1.ogg','OGGS/weapons/punch2.ogg','OGGS/weapons/punch3.ogg','OGGS/weapons/punch4.ogg')
+		if ("clownstep") soundin = pick('OGGS/misc/clownstep1.ogg','OGGS/misc/clownstep2.ogg')
+		if ("swing_hit") soundin = pick('OGGS/weapons/genhit1.ogg', 'OGGS/weapons/genhit2.ogg', 'OGGS/weapons/genhit3.ogg')
 
 	var/sound/S = sound(soundin)
 	S.wait = 0 //No queue
@@ -28,13 +28,13 @@
 	if(!src.client)
 		return
 	switch(soundin)
-		if ("shatter") soundin = pick('sound/effects/Glassbr1.ogg','sound/effects/Glassbr2.ogg','sound/effects/Glassbr3.ogg')
-		if ("explosion") soundin = pick('sound/effects/Explosion1.ogg','sound/effects/Explosion2.ogg')
-		if ("sparks") soundin = pick('sound/effects/sparks1.ogg','sound/effects/sparks2.ogg','sound/effects/sparks3.ogg','sound/effects/sparks4.ogg')
-		if ("rustle") soundin = pick('sound/misc/rustle1.ogg','sound/misc/rustle2.ogg','sound/misc/rustle3.ogg','sound/misc/rustle4.ogg','sound/misc/rustle5.ogg')
-		if ("punch") soundin = pick('sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg')
-		if ("clownstep") soundin = pick('sound/misc/clownstep1.ogg','sound/misc/clownstep2.ogg')
-		if ("swing_hit") soundin = pick('sound/weapons/genhit1.ogg', 'sound/weapons/genhit2.ogg', 'sound/weapons/genhit3.ogg')
+		if ("shatter") soundin = pick('OGGS/effects/Glassbr1.ogg','OGGS/effects/Glassbr2.ogg','OGGS/effects/Glassbr3.ogg')
+		if ("explosion") soundin = pick('OGGS/effects/Explosion1.ogg','OGGS/effects/Explosion2.ogg')
+		if ("sparks") soundin = pick('OGGS/effects/sparks1.ogg','OGGS/effects/sparks2.ogg','OGGS/effects/sparks3.ogg','OGGS/effects/sparks4.ogg')
+		if ("rustle") soundin = pick('OGGS/misc/rustle1.ogg','OGGS/misc/rustle2.ogg','OGGS/misc/rustle3.ogg','OGGS/misc/rustle4.ogg','OGGS/misc/rustle5.ogg')
+		if ("punch") soundin = pick('OGGS/weapons/punch1.ogg','OGGS/weapons/punch2.ogg','OGGS/weapons/punch3.ogg','OGGS/weapons/punch4.ogg')
+		if ("clownstep") soundin = pick('OGGS/misc/clownstep1.ogg','OGGS/misc/clownstep2.ogg')
+		if ("swing_hit") soundin = pick('OGGS/weapons/genhit1.ogg', 'OGGS/weapons/genhit2.ogg', 'OGGS/weapons/genhit3.ogg')
 
 	var/sound/S = sound(soundin)
 	S.wait = 0 //No queue
@@ -57,7 +57,7 @@ client/verb/Toggle_Soundscape()
 /area/Entered(A)
 
 	if(!music)
-		music = list('sound/ambience/ambigen1.ogg','sound/ambience/ambigen2.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen13.ogg','sound/ambience/ambigen14.ogg')
+		music = list('OGGS/ambience/ambigen1.ogg','OGGS/ambience/ambigen2.ogg','OGGS/ambience/ambigen3.ogg','OGGS/ambience/ambigen4.ogg','OGGS/ambience/ambigen5.ogg','OGGS/ambience/ambigen6.ogg','OGGS/ambience/ambigen7.ogg','OGGS/ambience/ambigen8.ogg','OGGS/ambience/ambigen9.ogg','OGGS/ambience/ambigen10.ogg','OGGS/ambience/ambigen11.ogg','OGGS/ambience/ambigen12.ogg','OGGS/ambience/ambigen13.ogg','OGGS/ambience/ambigen14.ogg')
 
 	if(!istype(music, /list))
 		music = list(music)

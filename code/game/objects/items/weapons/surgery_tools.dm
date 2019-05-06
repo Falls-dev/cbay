@@ -264,7 +264,7 @@ and then you have (1-3sec to respond to this eg by applying cotton.
 */
 /obj/item/weapon/disinfectant
 	name = "Surgical disinfectant"
-	icon = 'icons/obj/janitor.dmi'
+	icon = 'ICON/obj/janitor.dmi'
 	icon_state = "cleaner"
 
 /obj/item/weapon/disinfectant/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
@@ -303,7 +303,7 @@ and then you have (1-3sec to respond to this eg by applying cotton.
 
 /obj/item/weapon/surgicalglue
 	name = "Surgical glue"
-	icon = 'icons/obj/janitor.dmi'
+	icon = 'ICON/obj/janitor.dmi'
 	icon_state = "cleaner"
 
 /obj/item/weapon/surgicalglue/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
@@ -413,7 +413,7 @@ and then you have (1-3sec to respond to this eg by applying cotton.
 
 /obj/item/weapon/surgical_tool/bonegel
 	name = "Bone-gel"
-	icon = 'icons/obj/janitor.dmi'
+	icon = 'ICON/obj/janitor.dmi'
 	icon_state = "cleaner"
 
 /obj/item/weapon/surgical_tool/bonegel/New()
@@ -437,7 +437,7 @@ and then you have (1-3sec to respond to this eg by applying cotton.
 
 /obj/item/weapon/surgical_tool/bonecracker
 	name = "Bone-cracker"
-	icon = 'icons/obj/items.dmi'
+	icon = 'ICON/obj/items.dmi'
 	icon_state = "wrench"
 
 /obj/item/weapon/surgical_tool/bonecracker/New()
@@ -460,7 +460,7 @@ and then you have (1-3sec to respond to this eg by applying cotton.
 
 /obj/item/weapon/surgical_tool/blooddrainer
 	name = "Blood-disintergrator"
-	icon = 'icons/obj/items.dmi'
+	icon = 'ICON/obj/items.dmi'
 	icon_state = "wrench"
 
 /obj/item/weapon/surgical_tool/blooddrainer/New()
@@ -484,7 +484,7 @@ and then you have (1-3sec to respond to this eg by applying cotton.
 
 /obj/item/weapon/surgical_tool/newblood
 	name = "Nano-blood injector"
-	icon = 'icons/obj/items.dmi'
+	icon = 'ICON/obj/items.dmi'
 	icon_state = "dnainjector"
 
 /obj/item/weapon/surgical_tool/newblood/New()

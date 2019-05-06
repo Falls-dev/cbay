@@ -56,22 +56,6 @@ var/savefile/Banlist
 	CMinutes = (world.realtime / 10) / 60
 	return 1
 
-/*/proc/LoadBans()
-
-	Banlist = new("data/banlist.bdb")
-	log_admin("Loading Banlist")
-
-	if (!length(Banlist.dir)) log_admin("Banlist is empty.")
-
-	if (!Banlist.dir.Find("base"))
-		log_admin("Banlist missing base dir.")
-		Banlist.dir.Add("base")
-		Banlist.cd = "/base"
-	else if (Banlist.dir.Find("base"))
-		Banlist.cd = "/base"
-	ClearTempbans()
-	return 1
-*/
 /proc/ClearTempbans()
 	UpdateTime()
 	var/DBQuery/query = dbcon.NewQuery("SELECT `ckey` FROM `bans`")

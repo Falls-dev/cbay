@@ -8,7 +8,7 @@ AI MODULES
 
 /obj/item/weapon/aiModule
 	name = "AI Module"
-	icon = 'icons/obj/module.dmi'
+	icon = 'ICON/obj/module.dmi'
 	icon_state = "std_mod"
 	item_state = "electronic"
 	desc = "An AI Module for transmitting encrypted instructions to the AI."

@@ -33,7 +33,7 @@
 
 /obj/machinery/door/airlock
 	name = "Airlock"
-	icon = 'icons/obj/doors/doorint.dmi'
+	icon = 'ICON/obj/doors/doorint.dmi'
 	icon_state = "door_closed"
 
 	var/aiControlDisabled = 0 //If 1, AI control is disabled until the AI hacks back in and disables the lock. If 2, the AI has bypassed the lock. If -1, the control is enabled but the AI had bypassed it earlier, so if it is disabled again the AI would have no trouble getting back in.
@@ -59,77 +59,77 @@
 
 /obj/machinery/door/airlock/command
 	name = "Airlock"
-	icon = 'icons/obj/doors/Doorcom.dmi'
+	icon = 'ICON/obj/doors/Doorcom.dmi'
 	req_access = list(access_heads)
 
 /obj/machinery/door/airlock/glass/command
-	icon = 'icons/obj/doors/Doorcomglass.dmi'
+	icon = 'ICON/obj/doors/Doorcomglass.dmi'
 	req_access = list(access_heads)
 
 /obj/machinery/door/airlock/security
 	explosionstrength = 3
 	name = "Airlock"
-	icon = 'icons/obj/doors/Doorsec.dmi'
+	icon = 'ICON/obj/doors/Doorsec.dmi'
 	req_access = list(access_security)
 
 /obj/machinery/door/airlock/glass/security
-	icon = 'icons/obj/doors/Doorsecglass.dmi'
+	icon = 'ICON/obj/doors/Doorsecglass.dmi'
 	req_access = list(access_security)
 
 /obj/machinery/door/airlock/security/hatch
-	icon = 'icons/obj/doors/Doorhatcharmoury.dmi'
+	icon = 'ICON/obj/doors/Doorhatcharmoury.dmi'
 
 /obj/machinery/door/airlock/engineering
 	name = "Airlock"
-	icon = 'icons/obj/doors/Dooreng.dmi'
+	icon = 'ICON/obj/doors/Dooreng.dmi'
 	req_access = list(access_engine)
 
 /obj/machinery/door/airlock/glass/engineering
-	icon = 'icons/obj/doors/Doorengglass.dmi'
+	icon = 'ICON/obj/doors/Doorengglass.dmi'
 	req_access = list(access_engine)
 
 /obj/machinery/door/airlock/medical
 	name = "Airlock"
-	icon = 'icons/obj/doors/doormed.dmi'
+	icon = 'ICON/obj/doors/doormed.dmi'
 	//req_access = list(access_medical)
 
 /obj/machinery/door/airlock/science
 	name = "Airlock"
-	icon = 'icons/obj/doors/doorsci.dmi'
+	icon = 'ICON/obj/doors/doorsci.dmi'
 	//req_access = list(access_medical)
 
 /obj/machinery/door/airlock/glass/medical
-	icon = 'icons/obj/doors/doormedglass.dmi'
+	icon = 'ICON/obj/doors/doormedglass.dmi'
 
 /obj/machinery/door/airlock/glass/science
-	icon = 'icons/obj/doors/doorsciglass.dmi'
+	icon = 'ICON/obj/doors/doorsciglass.dmi'
 
 /obj/machinery/door/airlock/maintenance
 	name = "Maintenance Access"
-	icon = 'icons/obj/doors/Doormaint.dmi'
+	icon = 'ICON/obj/doors/Doormaint.dmi'
 	req_access = list(access_maint_tunnels)
 
 /obj/machinery/door/airlock/maintenance/hatch
 	name = "Maintenance Access"
-	icon = 'icons/obj/doors/Doorhatchmaint.dmi'
+	icon = 'ICON/obj/doors/Doorhatchmaint.dmi'
 	req_access = list(access_maint_tunnels)
 
 /obj/machinery/door/airlock/external
 	name = "External Airlock"
-	icon = 'icons/obj/doors/Doorext.dmi'
+	icon = 'ICON/obj/doors/Doorext.dmi'
 
 /obj/machinery/door/airlock/glass
 	name = "Glass Airlock"
-	icon = 'icons/obj/doors/Doorglass.dmi'
+	icon = 'ICON/obj/doors/Doorglass.dmi'
 	opacity = 0
 
 /obj/machinery/door/airlock/highsec
 	explosionstrength = 4
 	name = "Secure Airlock"
-	icon = 'icons/obj/doors/Doorhatchele.dmi'
+	icon = 'ICON/obj/doors/Doorhatchele.dmi'
 
 /obj/machinery/door/airlock/freezer
-	icon = 'icons/obj/doors/Doorfreezer.dmi'
+	icon = 'ICON/obj/doors/Doorfreezer.dmi'
 
 
 /obj/machinery/door/airlock/New()
@@ -183,7 +183,7 @@
 	if (src.welded || src.locked || (!src.arePowerSystemsOn()) || (stat & NOPOWER) || src.isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
 		return 0
 	use_power(50)
-	playsound(src.loc, 'sound/server/objects/airlock_open.ogg', 50, 1)
+	playsound(src.loc, 'OGGS/server/objects/airlock_open.ogg', 50, 1)
 	if (src.closeOther != null && istype(src.closeOther, /obj/machinery/door/airlock/) && !src.closeOther.density)
 		src.closeOther.close()
 	return ..()
@@ -217,7 +217,7 @@
 	if (src.welded || src.locked || (!src.arePowerSystemsOn()) || (stat & NOPOWER) || src.isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
 		return
 	use_power(50)
-	playsound(src.loc, 'sound/server/objects/airlock_close.ogg', 50, 1)
+	playsound(src.loc, 'OGGS/server/objects/airlock_close.ogg', 50, 1)
 	..()
 	return
 
@@ -1045,7 +1045,7 @@ About the new airlock wires panel:
 	if (ishuman(user) && prob(40) && src.density)
 		var/mob/living/carbon/human/H = user
 		if(H.brainloss >= 60)
-			playsound(src.loc, 'sound/effects/bang.ogg', 25, 1)
+			playsound(src.loc, 'OGGS/effects/bang.ogg', 25, 1)
 			if(!istype(H.head, /obj/item/clothing/head/helmet))
 				for(var/mob/M in viewers(src, null))
 					M.show_message("\red [user] headbutts the airlock.", 1, "\red You hear a bang.", 2)
@@ -1142,7 +1142,7 @@ About the new airlock wires panel:
 			spawn( 0 )
 				src.operating = 1
 				do_animate("opening")
-				playsound(src.loc, 'sound/server/objects/airlock_open_force.ogg', 50, 1)
+				playsound(src.loc, 'OGGS/server/objects/airlock_open_force.ogg', 50, 1)
 
 				sleep(15)
 
@@ -1160,7 +1160,7 @@ About the new airlock wires panel:
 				spawn( 0 )
 					src.operating = 1
 					do_animate("closing")
-					playsound(src.loc, 'sound/server/objects/airlock_close_force.ogg', 50, 1)
+					playsound(src.loc, 'OGGS/server/objects/airlock_close_force.ogg', 50, 1)
 
 					src.density = 1
 					sleep(15)

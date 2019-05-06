@@ -370,23 +370,23 @@ mob
 
 				var/datum/pipe_network/master = P.return_network()
 				if(master)
-					P.overlayss += icon('icons/Testing/atmos_testing.dmi',"marker[master.marker]")
+					P.overlayss += icon('ICON/Testing/atmos_testing.dmi',"marker[master.marker]")
 				else
 					world << "error"
-					P.overlayss += icon('icons/Testing/atmos_testing.dmi',"marker0")
+					P.overlayss += icon('ICON/Testing/atmos_testing.dmi',"marker0")
 
 			for(var/obj/machinery/atmospherics/valve/V in world)
 				V.overlayss = null
 
 				if(V.network_node1)
-					V.overlayss += icon('icons/Testing/atmos_testing.dmi',"marker[V.network_node1.marker]")
+					V.overlayss += icon('ICON/Testing/atmos_testing.dmi',"marker[V.network_node1.marker]")
 				else
-					V.overlayss += icon('icons/Testing/atmos_testing.dmi',"marker0")
+					V.overlayss += icon('ICON/Testing/atmos_testing.dmi',"marker0")
 
 				if(V.network_node2)
-					V.overlayss += icon('icons/Testing/atmos_testing.dmi',"marker[V.network_node2.marker]")
+					V.overlayss += icon('ICON/Testing/atmos_testing.dmi',"marker[V.network_node2.marker]")
 				else
-					V.overlayss += icon('icons/Testing/atmos_testing.dmi',"marker0")
+					V.overlayss += icon('ICON/Testing/atmos_testing.dmi',"marker0")
 
 turf/simulated
 	var/fire_verbose = 0
@@ -397,9 +397,9 @@ turf/simulated
 			overlayss = null
 			for(var/direction in list(NORTH,SOUTH,EAST,WEST))
 				if(group_border&direction)
-					overlayss += icon('icons/Testing/turf_analysis.dmi',"red_arrow",direction)
+					overlayss += icon('ICON/Testing/turf_analysis.dmi',"red_arrow",direction)
 				else if(air_check_directions&direction)
-					overlayss += icon('icons/Testing/turf_analysis.dmi',"arrow",direction)
+					overlayss += icon('ICON/Testing/turf_analysis.dmi',"arrow",direction)
 		air_status()
 			set src in world
 			set category = "Minor"
@@ -444,7 +444,7 @@ turf/simulated
 				assume_air(adding)
 
 obj/indicator
-	icon = 'icons/Testing/air_meter.dmi'
+	icon = 'ICON/Testing/air_meter.dmi'
 	var/measure = "temperature"
 	anchored = 1
 
@@ -559,7 +559,7 @@ mob
 				group.marker = 0
 
 			for(var/turf/simulated/floor/S in world)
-				S.icon = 'icons/Testing/turf_analysis.dmi'
+				S.icon = 'ICON/Testing/turf_analysis.dmi'
 				if(S.parent)
 					if(S.parent.group_processing)
 						if(S.parent.marker == 0)
@@ -583,7 +583,7 @@ mob
 
 /*
 			for(var/obj/movable/floor/S in world)
-				S.icon = 'icons/Testing/turf_analysis.dmi'
+				S.icon = 'ICON/Testing/turf_analysis.dmi'
 				if(S.parent)
 					if(S.parent.group_processing)
 						if(S.parent.marker == 0)

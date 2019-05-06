@@ -1,6 +1,6 @@
 obj/item/weapon/laptop
 	name = "Laptop"
-	icon = 'icons/laptop.dmi'
+	icon = 'ICON/laptop.dmi'
 	icon_state = "laptop_0"
 	var/datum/os/OS
 	var/on = 0

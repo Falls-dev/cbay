@@ -402,7 +402,7 @@ var/supply_shuttle_points = 50
 /obj/plasticflaps //HOW DO YOU CALL THOSE THINGS ANYWAY
 	name = "Plastic flaps"
 	desc = "Free-hanging flaps of hard plastic."
-	icon = 'icons/obj/stationobjs.dmi' //Change this.
+	icon = 'ICON/obj/stationobjs.dmi' //Change this.
 	icon_state = "plasticflaps"
 	density = 0
 	opacity = 1
@@ -436,7 +436,7 @@ var/supply_shuttle_points = 50
 
 /obj/machinery/computer/supplycomp
 	name = "Supply shuttle console"
-	icon = 'icons/obj/computer.dmi'
+	icon = 'ICON/obj/computer.dmi'
 	icon_state = "shuttle"
 	req_access = list(access_cargo)
 	var/temp = null
@@ -444,7 +444,7 @@ var/supply_shuttle_points = 50
 
 /obj/machinery/computer/ordercomp
 	name = "Supply ordering console"
-	icon = 'icons/obj/computer.dmi'
+	icon = 'ICON/obj/computer.dmi'
 	icon_state = "supply"
 	var/temp = null
 	brightnessred = 2
@@ -453,7 +453,7 @@ var/supply_shuttle_points = 50
 
 /obj/marker/supplymarker
 	icon_state = "X"
-	icon = 'icons/misc/mark.dmi'
+	icon = 'ICON/misc/mark.dmi'
 	name = "X"
 	invisibility = 101
 	anchored = 1

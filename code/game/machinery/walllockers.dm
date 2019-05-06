@@ -1,6 +1,6 @@
 /obj/machinery/walllocker
 	name = "Wall Locker"
-	icon = 'icons/obj/lockwall.dmi'
+	icon = 'ICON/obj/lockwall.dmi'
 	icon_state = "emerg"
 	anchored = 1
 	var/list/items_inside = list()

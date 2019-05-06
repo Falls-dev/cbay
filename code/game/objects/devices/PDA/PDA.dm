@@ -4,7 +4,7 @@
 /obj/item/device/pda
 	name = "PDA"
 	desc = "A portable microcomputer by Thinktronic Systems, LTD. Functionality determined by a preprogrammed ROM cartridge."
-	icon = 'icons/obj/pda.dmi'
+	icon = 'ICON/obj/pda.dmi'
 	icon_state = "pda"
 	item_state = "electronic"
 	w_class = 2.0
@@ -411,7 +411,7 @@
 						scanmode = 4
 				if("Honk")
 					if ( !(last_honk && world.time < last_honk + 20) )
-						playsound(loc, 'sound/items/bikehorn.ogg', 50, 1)
+						playsound(loc, 'OGGS/items/bikehorn.ogg', 50, 1)
 						last_honk = world.time
 
 //MESSENGER/NOTE FUNCTIONS===================================
@@ -477,12 +477,12 @@
 							A.show_message("<i>Intercepted message from <b>[P:owner]</b>: [t]</i>")
 
 					if (!P.silent)
-						playsound(P.loc, 'sound/machines/twobeep.ogg', 50, 1)
+						playsound(P.loc, 'OGGS/machines/twobeep.ogg', 50, 1)
 						for (var/mob/O in hearers(3, P.loc))
 							O.show_message(text("\icon[P] *[P.ttone]*"))
 
 					P.overlays = null
-					P.overlays += image('icons/obj/pda.dmi', "pda-r")
+					P.overlays += image('ICON/obj/pda.dmi', "pda-r")
 				if("Send Honk")//Honk virus
 					if(istype(cartridge, /obj/item/weapon/cartridge/clown))//Cartridge checks are kind of unnecessary since everything is done through switch.
 						var/obj/item/device/pda/P = locate(href_list["target"])//Leaving it alone in case it may do something useful, I guess.
@@ -595,7 +595,7 @@
 
 	if ((honkamt > 0) && (prob(60)))//For clown virus.
 		honkamt--
-		playsound(loc, 'sound/items/bikehorn.ogg', 30, 1)
+		playsound(loc, 'OGGS/items/bikehorn.ogg', 30, 1)
 
 	if(U.machine == src)//Final safety.
 		attack_self(U)//It auto-closes the menu prior if the user is not in range and so on.
@@ -815,7 +815,7 @@
 
 		M.pulling = null
 		M << "\blue You slipped on the PDA!"
-		playsound(src.loc, 'sound/misc/slip.ogg', 50, 1, -3)
+		playsound(src.loc, 'OGGS/misc/slip.ogg', 50, 1, -3)
 		M.stunned = 8
 		M.weakened = 5
 
@@ -873,12 +873,12 @@
 	selected:tnote += "<i><b>&larr; From (AI) [usr.name]:</b></i><br>[t]<br>"
 
 	if (!selected:silent)
-		playsound(selected.loc, 'sound/machines/twobeep.ogg', 50, 1)
+		playsound(selected.loc, 'OGGS/machines/twobeep.ogg', 50, 1)
 		for (var/mob/O in hearers(3, selected.loc))
 			O.show_message(text("\icon[selected] *[selected:ttone]*"))
 
 	selected.overlays = null
-	selected.overlays += image('icons/obj/pda.dmi', "pda-r")
+	selected.overlays += image('ICON/obj/pda.dmi', "pda-r")
 
 
 //Some spare PDAs in a box
@@ -886,7 +886,7 @@
 /obj/item/weapon/storage/PDAbox
 	name = "spare PDAs"
 	desc = "A box of spare PDA microcomputers."
-	icon = 'icons/obj/pda.dmi'
+	icon = 'ICON/obj/pda.dmi'
 	icon_state = "pdabox"
 	item_state = "syringe_kit"
 

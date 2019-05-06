@@ -7,7 +7,7 @@ SPOON
 */
 
 /obj/item/weapon/kitchen
-	icon = 'icons/obj/kitchen.dmi'
+	icon = 'ICON/obj/kitchen.dmi'
 
 /obj/item/weapon/kitchen/utensil
 	w_class = 1.0

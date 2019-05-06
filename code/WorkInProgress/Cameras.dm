@@ -1,6 +1,6 @@
 /obj/item/weapon/storage/photo_album
 	name = "Photo album"
-	icon = 'icons/misc/old_or_unused.dmi'
+	icon = 'ICON/misc/old_or_unused.dmi'
 	icon_state = "album"
 	item_state = "briefcase"
 
@@ -59,7 +59,7 @@
 
 /obj/item/weapon/camera_test
 	name = "camera"
-	icon = 'icons/misc/old_or_unused.dmi'
+	icon = 'ICON/misc/old_or_unused.dmi'
 	desc = "A one use - polaroid camera. 10 photos left."
 	icon_state = "camera"
 	item_state = "electropack"
@@ -74,7 +74,7 @@
 
 /obj/item/weapon/photo
 	name = "photo"
-	icon = 'icons/misc/old_or_unused.dmi'
+	icon = 'ICON/misc/old_or_unused.dmi'
 	icon_state = "photo"
 	item_state = "clipboard"
 	w_class = 1.0
@@ -95,7 +95,7 @@
 
 	var/turf/the_turf = get_turf(target)
 
-	var/icon/photo = icon('icons/misc/old_or_unused.dmi',"photo")
+	var/icon/photo = icon('ICON/misc/old_or_unused.dmi',"photo")
 
 	var/icon/turficon = build_composite_icon(the_turf)
 	turficon.Scale(22,20)
@@ -178,7 +178,7 @@
 	P.name = finished_title
 	P.desc = finished_detail
 
-	playsound(src.loc, pick('sound/items/polaroid1.ogg','sound/items/polaroid2.ogg'), 75, 1, -3)
+	playsound(src.loc, pick('OGGS/items/polaroid1.ogg','OGGS/items/polaroid2.ogg'), 75, 1, -3)
 
 	pictures_left--
 	src.desc = "A one use - polaroid camera. [pictures_left] photos left."

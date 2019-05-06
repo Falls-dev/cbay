@@ -1,6 +1,6 @@
 /obj/machinery/console
 	name = "computer"
-	icon = 'icons/obj/computer.dmi'
+	icon = 'ICON/obj/computer.dmi'
 	density = 1
 	anchored = 1.0
 	var/brightnessred = 2

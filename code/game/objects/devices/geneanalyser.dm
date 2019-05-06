@@ -1,7 +1,7 @@
 
 /obj/item/device/geneticsanalyzer
 	name = "Genetics Analyser"
-	icon = 'icons/obj/device.dmi'
+	icon = 'ICON/obj/device.dmi'
 	icon_state = "genetics"
 	w_class = 2
 

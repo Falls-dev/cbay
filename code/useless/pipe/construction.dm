@@ -8,7 +8,7 @@ Buildable meters
 	desc = "A pipe"
 	var/pipe_type = 0
 	var/pipe_dir = 0
-	icon = 'icons/obj/pipe-item.dmi'
+	icon = 'ICON/obj/pipe-item.dmi'
 	icon_state = "straight"
 	item_state = "buildpipe"
 	flags = TABLEPASS|FPRINT
@@ -169,7 +169,7 @@ Buildable meters
 				if( (M.p_dir & pipedir) || (M.h_dir & pipedir) )	// matches at least one direction on either type of pipe
 					user << "There is already a pipe at that location."
 					return
-		playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+		playsound(src.loc, 'OGGS/items/Ratchet.ogg', 50, 1)
 
 		// no conflicts found
 
@@ -404,7 +404,7 @@ Buildable meters
 /obj/item/weapon/pipe_meter
 	name = "meter"
 	desc = "A meter that can be laid on pipes"
-	icon = 'icons/obj/pipe-item.dmi'
+	icon = 'ICON/obj/pipe-item.dmi'
 	icon_state = "meter"
 	item_state = "buildpipe"
 	flags = TABLEPASS|FPRINT
@@ -415,7 +415,7 @@ Buildable meters
 	if (istype(W, /obj/item/weapon/wrench))
 		if(locate(/obj/machinery/pipes, src.loc))
 			new/obj/machinery/meter( src.loc )
-			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+			playsound(src.loc, 'OGGS/items/Ratchet.ogg', 50, 1)
 			user << "You have fastened the meter to the pipe"
 			del(src)
 		else
@@ -425,7 +425,7 @@ Buildable meters
 /obj/item/weapon/filter_control
 	name = "filter control"
 	desc = "A switch to control filter inlets"
-	icon = 'icons/obj/pipe-item.dmi'
+	icon = 'ICON/obj/pipe-item.dmi'
 	icon_state = "filter_control"
 	item_state = "buildpipe"
 	flags = TABLEPASS|FPRINT

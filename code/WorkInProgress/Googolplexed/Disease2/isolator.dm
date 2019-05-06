@@ -2,7 +2,7 @@
 	name = "Pathogenic Isolator"
 	density = 1
 	anchored = 1
-	icon = 'icons/obj/virology.dmi'
+	icon = 'ICON/obj/virology.dmi'
 	icon_state = "isolator"
 	var/datum/disease2/disease/virus2 = null
 	var/isolating = 0
@@ -110,7 +110,7 @@
 
 /obj/item/weapon/virusdish
 	name = "Virus containment/growth dish"
-	icon = 'icons/obj/items.dmi'
+	icon = 'ICON/obj/items.dmi'
 	icon_state = "implantcase-b"
 	var/datum/disease2/disease/virus2 = null
 	var/growth = 0

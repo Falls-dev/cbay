@@ -131,7 +131,7 @@
 </body>
 </html>
 "}
-	user << browse_rsc('icons/UI/MixerComputer.png')
+	user << browse_rsc('ICON/UI/MixerComputer.png')
 	user << browse(dat, "window=mixer;size=300x435")
 	onclose(user, "mixer")
 

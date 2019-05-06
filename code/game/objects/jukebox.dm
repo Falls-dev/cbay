@@ -8,7 +8,7 @@ datum/track/New(var/title_name, var/audio)
 
 /obj/machinery/jukebox
 	name = "jukebox"
-	icon = 'icons/obj/jukebox.dmi'
+	icon = 'ICON/obj/jukebox.dmi'
 	icon_state = "jukebox"
 	anchored = 1
 	density = 0
@@ -19,8 +19,8 @@ datum/track/New(var/title_name, var/audio)
 
 	var/datum/track/current_track
 	var/list/datum/track/tracks = list(
-		new/datum/track("Song 1", 'sound/jukebox/barsong1.ogg'),
-		new/datum/track("Song 2", 'sound/jukebox/barsong2.ogg'),
+		new/datum/track("Song 1", 'OGGS/jukebox/barsong1.ogg'),
+		new/datum/track("Song 2", 'OGGS/jukebox/barsong2.ogg'),
 	)
 
 /obj/machinery/jukebox/attack_hand(user as mob)
@@ -36,7 +36,7 @@ datum/track/New(var/title_name, var/audio)
 /obj/machinery/jukebox/proc/play()
 	stop()
 
-	spawn _SoundEngine('sound/jukebox/barsong1.ogg', src, range=80, repeat=1, volume=volume, falloff=5)
+	spawn _SoundEngine('OGGS/jukebox/barsong1.ogg', src, range=80, repeat=1, volume=volume, falloff=5)
 
 	playing = 1
 

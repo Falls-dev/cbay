@@ -2,7 +2,7 @@
 
 /obj/machinery/network/antenna
 	name = "Communications Antenna"
-	icon = 'icons/obj/machines/antenna.dmi'
+	icon = 'ICON/obj/machines/antenna.dmi'
 	icon_state = "1"
 	var/obj/machinery/network/antenna/base/base = null
 	cnetdontadd = 1

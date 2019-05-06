@@ -3,7 +3,7 @@
 	anchored = 1
 	name = "Network Cable"
 	desc = "A flexible cable designed for use in the Neithernet Protocol."
-	icon = 'icons/obj/machines/netcable.dmi'
+	icon = 'ICON/obj/machines/netcable.dmi'
 	icon_state = "1-2"
 	var/cnetnum = 0
 	var/d1 = 0
@@ -15,7 +15,7 @@
 /obj/item/weapon/computercable_coil
 	name = "Network Cable Coil"
 	var/amount = 30
-	icon = 'icons/obj/machines/netcable.dmi'
+	icon = 'ICON/obj/machines/netcable.dmi'
 	icon_state = "coil"
 	desc = "A coil of Network cable."
 	w_class = 2
@@ -321,7 +321,7 @@ obj/computercable/New()
 		var/nd1 = C.d2	// these will be the new directions
 		var/nd2 = dirn
 
-		if(nd1 > nd2)		// swap directions to match icons/states
+		if(nd1 > nd2)		// swap directions to match ICON/states
 			nd1 = dirn
 			nd2 = C.d2
 

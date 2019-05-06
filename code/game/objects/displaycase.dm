@@ -55,7 +55,7 @@
 			playsound(src, "shatter", 70, 1)
 			update_icon()
 	else
-		playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
+		playsound(src.loc, 'OGGS/effects/Glasshit.ogg', 75, 1)
 	return
 
 /obj/displaycase/proc/update_icon()

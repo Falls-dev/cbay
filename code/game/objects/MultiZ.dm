@@ -1,5 +1,5 @@
 /obj/multiz
-	icon = 'icons/obj/multiz.dmi'
+	icon = 'ICON/obj/multiz.dmi'
 	density = 0
 	opacity = 0
 	anchored = 1

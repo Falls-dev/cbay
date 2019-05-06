@@ -1,6 +1,6 @@
 /obj/machinery/computer/diseasesplicer
 	name = "Disease Splicer"
-	icon = 'icons/obj/computer.dmi'
+	icon = 'ICON/obj/computer.dmi'
 	icon_state = "splicer"
 	brightnessred = 0
 	brightnessgreen = 2
@@ -17,7 +17,7 @@
 
 /obj/machinery/computer/diseasesplicer/attackby(var/obj/I as obj, var/mob/user as mob)
 	if(istype(I, /obj/item/weapon/screwdriver))
-		playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
+		playsound(src.loc, 'OGGS/items/Screwdriver.ogg', 50, 1)
 		if(do_after(user, 20))
 			if (src.stat & BROKEN)
 				user << "\blue The broken glass falls out."
@@ -184,7 +184,7 @@
 
 /obj/item/weapon/diseasedisk
 	name = "Blank GNA disk"
-	icon = 'icons/obj/items.dmi'
+	icon = 'ICON/obj/items.dmi'
 	icon_state = "datadisk0"
 	var/datum/disease2/effectholder/effect = null
 	var/stage = 1

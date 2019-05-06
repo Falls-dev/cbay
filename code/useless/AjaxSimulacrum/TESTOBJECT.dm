@@ -1,7 +1,7 @@
 /obj/machinery/ASTEST
 	var/mode = 0
 	var/step = 0
-	icon = 'icons/obj/computer.dmi'
+	icon = 'ICON/obj/computer.dmi'
 	icon_state = "power"
 	name = "AjaxSimulacrum TEST"
 	density = 1

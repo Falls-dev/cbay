@@ -45,7 +45,7 @@
 				priority = "Undetermined"
 
 /obj/machinery/message_server
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'ICON/obj/stationobjs.dmi'
 	icon_state = "server"
 	name = "Messaging Server"
 	density = 1
@@ -69,7 +69,7 @@
 
 
 /obj/machinery/blackbox_recorder
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'ICON/obj/stationobjs.dmi'
 	icon_state = "blackbox"
 	name = "Blackbox Recorder"
 	density = 1

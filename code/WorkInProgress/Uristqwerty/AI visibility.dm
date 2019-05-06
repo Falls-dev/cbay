@@ -93,7 +93,7 @@
 
 		if(!(t in visibleTurfs))
 			if(!t.obscured)
-				t.obscured = image('icons/Uristqwerty/cameravis.dmi', t, "black", 15)
+				t.obscured = image('ICON/Uristqwerty/cameravis.dmi', t, "black", 15)
 
 			obscured += t.obscured
 			for(var/mob/aiEye/m in seenby)
@@ -102,7 +102,7 @@
 	for(var/turf/t in dimAdded)
 		if(!(t in visibleTurfs))
 			if(!t.dim)
-				t.dim = image('icons/Uristqwerty/cameravis.dmi', t, "dim", 15)
+				t.dim = image('ICON/Uristqwerty/cameravis.dmi', t, "dim", 15)
 
 			dim += t.dim
 			for(var/mob/aiEye/m in seenby)
@@ -122,7 +122,7 @@
 	for(var/turf/t in visRemoved)
 		if(t in obscuredTurfs)
 			if(!t.obscured)
-				t.obscured = image('icons/Uristqwerty/cameravis.dmi', t, "black", 15)
+				t.obscured = image('ICON/Uristqwerty/cameravis.dmi', t, "black", 15)
 
 			obscured += t.obscured
 			for(var/mob/aiEye/m in seenby)
@@ -159,14 +159,14 @@
 
 	for(var/turf/t in obscuredTurfs)
 		if(!t.obscured)
-			t.obscured = image('icons/Uristqwerty/cameravis.dmi', t, "black", 15)
+			t.obscured = image('ICON/Uristqwerty/cameravis.dmi', t, "black", 15)
 
 		obscured += t.obscured
 
 	for(var/turf/t in dimTurfs)
 		if(!(t in visibleTurfs))
 			if(!t.dim)
-				t.dim = image('icons/Uristqwerty/cameravis.dmi', t, "dim", 15)
+				t.dim = image('ICON/Uristqwerty/cameravis.dmi', t, "dim", 15)
 
 			dim += t.dim
 

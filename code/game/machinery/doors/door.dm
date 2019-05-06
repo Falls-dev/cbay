@@ -346,7 +346,7 @@
 	return
 
 /obj/machinery/door/unpowered/shuttle
-	icon = 'icons/turf/shuttle.dmi'
+	icon = 'ICON/turf/shuttle.dmi'
 	name = "door"
 	icon_state = "door1"
 	opacity = 1
@@ -354,7 +354,7 @@
 	autoopen = 0
 
 /obj/machinery/door/unpowered/shuttle/black
-	icon = 'icons/turf/shuttle.dmi'
+	icon = 'ICON/turf/shuttle.dmi'
 	name = "shuttle door"
 	icon_state = "shuttle_door_close"
 	opacity = 1

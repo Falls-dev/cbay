@@ -23,7 +23,7 @@
 	var/turf/myturf = get_turf(usr)
 
 	var/obj/overlay/pulse = new/obj/overlay ( myturf )
-	pulse.icon = 'icons/effects/effects.dmi'
+	pulse.icon = 'ICON/effects/effects.dmi'
 	pulse.icon_state = "emppulse"
 	pulse.name = "emp pulse"
 	pulse.anchored = 1
@@ -122,7 +122,7 @@
 		A.use_power(7500)
 
 		var/obj/overlay/pulse2 = new/obj/overlay ( A.loc )
-		pulse2.icon = 'icons/effects/effects.dmi'
+		pulse2.icon = 'ICON/effects/effects.dmi'
 		pulse2.icon_state = "empdisable"
 		pulse2.name = "emp sparks"
 		pulse2.anchored = 1

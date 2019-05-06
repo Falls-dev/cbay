@@ -415,5 +415,5 @@ Microphone:"<A href='byond://?src=\ref[src];ch_name=[chan_name];talk=[!broad]'> 
 
 /obj/item/device/radio/banana //Why is this even needed? So that it shows up as a banana in the chat log.
 	name = "Banana Phone"
-	icon = 'icons/obj/items.dmi'
+	icon = 'ICON/obj/items.dmi'
 	icon_state = "banana" //needs a new icon.

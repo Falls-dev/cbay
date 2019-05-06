@@ -256,8 +256,8 @@ mob/verb
             var/_calls = max(10, input(usr, "How many calls to each proc do you want to perform?") as num)
             while(_calls--)
                 spawn
-                    _SoundEngine('sound/effects/blobattack.ogg', usr, range=5)
-                    //src.SoundEngine('sound/effects/blobattack.ogg',5)
+                    _SoundEngine('OGGS/effects/blobattack.ogg', usr, range=5)
+                    //src.SoundEngine('OGGS/effects/blobattack.ogg',5)
                 sleep(0.5)
 
             alert(usr, "Okay, now check the profiler and look for both, mob/proc/SoundEngine and /proc/_SoundEngine and compare them.\n Now when you are ready hit ok and we will proceed with the test.")
@@ -270,20 +270,20 @@ mob/verb
                     location = locate(usr.x - rand(-7,7), usr.y - rand(-7,7), usr.z)
                 while(isnull(location))
 
-                location.overlays += icon('icons/obj/closet.dmi', "closed")
+                location.overlays += icon('ICON/obj/closet.dmi', "closed")
                 var app = location.overlays[location.overlays.len]
-                _SoundEngine('sound/effects/blobattack.ogg', location, range=5)
+                _SoundEngine('OGGS/effects/blobattack.ogg', location, range=5)
                 sleep(15)
                 location.overlays.Remove(app)
             alert(usr, "The next check will play a repeated sound on a turf, so you can walk around and see if sound updates.")
-            var/sound/_sound = _SoundEngine('sound/jukebox/barsong1.ogg', location, range=5, repeat=1)     // _SoundEngine also returns the sound it used for you to manipulate it if needed!
+            var/sound/_sound = _SoundEngine('OGGS/jukebox/barsong1.ogg', location, range=5, repeat=1)     // _SoundEngine also returns the sound it used for you to manipulate it if needed!
                                                                                                     // However special care must be put.
             while(_sound)
                 sleep(50)
             alert(usr, "In the next phase of the testing stage, you will hear three sounds repeteadly at the same time and different locations.")
-            _sound = _SoundEngine('sound/effects/blobattack.ogg', locate(usr.x - rand(-7,7), usr.y - rand(-7,7), usr.z) || location, range=5,repeat=1,falloff=2)
-            var/sound/_sound2 = _SoundEngine('sound/effects/blobattack.ogg', locate(usr.x - rand(-7,7), usr.y - rand(-7,7), usr.z) || location, range=5,repeat=1,falloff=2)
-            var/sound/_sound3 = _SoundEngine('sound/effects/blobattack.ogg', locate(usr.x - rand(-7,7), usr.y - rand(-7,7), usr.z) || location, range=5,repeat=1,falloff=2)
+            _sound = _SoundEngine('OGGS/effects/blobattack.ogg', locate(usr.x - rand(-7,7), usr.y - rand(-7,7), usr.z) || location, range=5,repeat=1,falloff=2)
+            var/sound/_sound2 = _SoundEngine('OGGS/effects/blobattack.ogg', locate(usr.x - rand(-7,7), usr.y - rand(-7,7), usr.z) || location, range=5,repeat=1,falloff=2)
+            var/sound/_sound3 = _SoundEngine('OGGS/effects/blobattack.ogg', locate(usr.x - rand(-7,7), usr.y - rand(-7,7), usr.z) || location, range=5,repeat=1,falloff=2)
             while(_sound || _sound2 || _sound3)
                 sleep(50)
 

@@ -1,6 +1,6 @@
 /obj/machinery/portable_atmospherics/canister
 	name = "canister"
-	icon = 'icons/obj/atmos.dmi'
+	icon = 'ICON/obj/atmos.dmi'
 	density = 1
 	var/health = 100.0
 	flags = FPRINT | CONDUCT
@@ -49,18 +49,18 @@
 	else
 		icon_state = "[colour]"
 		if(holding)
-			overlays += image('icons/obj/atmos.dmi', "can-oT")
+			overlays += image('ICON/obj/atmos.dmi', "can-oT")
 
 		var/tank_pressure = air_contents.return_pressure()
 
 		if (tank_pressure < 10)
-			overlays += image('icons/obj/atmos.dmi', "can-o0")
+			overlays += image('ICON/obj/atmos.dmi', "can-o0")
 		else if (tank_pressure < ONE_ATMOSPHERE)
-			overlays += image('icons/obj/atmos.dmi', "can-o1")
+			overlays += image('ICON/obj/atmos.dmi', "can-o1")
 		else if (tank_pressure < 15*ONE_ATMOSPHERE)
-			overlays += image('icons/obj/atmos.dmi', "can-o2")
+			overlays += image('ICON/obj/atmos.dmi', "can-o2")
 		else
-			overlays += image('icons/obj/atmos.dmi', "can-o3")
+			overlays += image('ICON/obj/atmos.dmi', "can-o3")
 	return
 
 /obj/machinery/portable_atmospherics/canister/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
@@ -77,7 +77,7 @@
 		location.assume_air(air_contents)
 
 		src.destroyed = 1
-		playsound(src.loc, 'sound/effects/spray.ogg', 10, 1, -3)
+		playsound(src.loc, 'OGGS/effects/spray.ogg', 10, 1, -3)
 		src.density = 0
 		update_icon()
 

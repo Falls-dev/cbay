@@ -18,7 +18,7 @@ datum/controller/game_controller
 		if(master_controller && (master_controller != src))
 			del(src) // There can be only one master.
 		world << "Initializing world.."
-		diary << "World initialization started at [time2text(world.timeofday, "hh:mm.ss")]"
+		to_log ("SERVER: World Init Started")
 		var/start_worldinit = world.timeofday
 
 		spawn(0)
@@ -53,21 +53,21 @@ datum/controller/game_controller
 
 		if(!air_master)
 			world << "\red \b Initializing air controller"
-			diary << "Air controller initialization started at [time2text(world.timeofday, "hh:mm.ss")]"
+			to_log ("SERVER: Air Controller Init")
 			var/start_airmaster = world.timeofday
 			air_master = new /datum/controller/air_system()
 			air_master.setup()
 			world << "\red \b Air controller initialized in [(world.timeofday - start_airmaster)/10] seconds!"
-			diary << "Air controller initialized at [time2text(world.timeofday, "hh:mm.ss")]. It took [(world.timeofday - start_airmaster)/10] seconds."
+			to_log ("SERVER: Air Controller Init")
 
 		plmaster = new /obj/overlay(  )
-		plmaster.icon = 'icons/effects/tile_effects.dmi'
+		plmaster.icon = 'ICON/effects/tile_effects.dmi'
 		plmaster.icon_state = "plasma"
 		plmaster.layer = FLY_LAYER
 		plmaster.mouse_opacity = 0
 
 		slmaster = new /obj/overlay(  )
-		slmaster.icon = 'icons/effects/tile_effects.dmi'
+		slmaster.icon = 'ICON/effects/tile_effects.dmi'
 		slmaster.icon_state = "sleeping_agent"
 		slmaster.layer = FLY_LAYER
 		slmaster.mouse_opacity = 0
@@ -103,11 +103,11 @@ datum/controller/game_controller
 			ticker.pregame()
 
 		world << "\red \b World initialized in [(world.timeofday - start_worldinit)/10] seconds"
-		diary << "World initialized in [time2text(world.timeofday, "hh:mm.ss")]. It took [(world.timeofday - start_worldinit)/10] seconds."
+		to_log ("SERVER: World Init. It took [(world.timeofday - start_worldinit)/10] seconds.")
 
 	setup_objects()
 		world << "\red \b Initializing objects..."
-		diary << "Object initialization started at [time2text(world.timeofday, "hh:mm.ss")]"
+		to_log ("SERVER: Objects Init Start")
 		sleep(-1)
 
 		var/count_obj = 0
@@ -118,7 +118,7 @@ datum/controller/game_controller
 			count_obj++
 
 		world << "\red \b [count_obj] objects initialized in [(world.timeofday - start_objects_init)/10] seconds!"
-		diary << "Object initialization finished at [time2text(world.timeofday, "hh:mm.ss")]. It took [(world.timeofday - start_objects_init)/10] seconds to start [count_obj] objects."
+		to_log ("SERVER: Objects Init Finish. It took [(world.timeofday - start_objects_init)/10] seconds to start [count_obj] objects.")
 
 		world << "\red \b Initializing pipe networks..."
 		sleep(-1)
@@ -128,13 +128,13 @@ datum/controller/game_controller
 
 
 		world << "\red \b Building Unified Networks..."
-		diary << "Unified Network creation started at [time2text(world.timeofday, "hh:mm.ss")]"
+		to_log ("SERVER: Unified Network Creation Start")
 		var/start_network_creation = world.timeofday
 
 		MakeUnifiedNetworks()
 
 		world << "\red \b Unified Networks created in [(world.timeofday - start_network_creation)/10] seconds!"
-		diary << "Unified Networks created in [time2text(world.timeofday, "hh:mm.ss")]. It took [(world.timeofday-start_network_creation)/10] seconds."
+		to_log ("SERVER: Unified Networks Creatin Finish. It took [(world.timeofday-start_network_creation)/10] seconds.")
 
 		world << "\red \b Initializations complete."
 

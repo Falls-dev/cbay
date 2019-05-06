@@ -1,7 +1,7 @@
 obj/machinery/scanner
 	name = "Scanner"
 	var/outputdir = 0
-	icon = 'icons/obj/computer.dmi'
+	icon = 'ICON/obj/computer.dmi'
 	icon_state = "aiupload"
 	density = 1
 	anchored = 1

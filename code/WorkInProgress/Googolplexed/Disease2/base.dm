@@ -9,7 +9,7 @@
 	// a virus instance that is placed on the map, moves, and infects
 	invisibility = 100
 
-	icon = 'icons/laptop.dmi'
+	icon = 'ICON/laptop.dmi'
 	icon_state = "laptop_0"
 
 	var/datum/disease2/D

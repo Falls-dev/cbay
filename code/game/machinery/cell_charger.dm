@@ -25,7 +25,7 @@
 		if(chargelevel != newlevel)
 
 			overlays = null
-			overlays += image('icons/obj/power.dmi', "ccharger-o[newlevel]")
+			overlays += image('ICON/obj/power.dmi', "ccharger-o[newlevel]")
 
 			chargelevel = newlevel
 	else

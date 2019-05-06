@@ -1,5 +1,5 @@
 /obj/item/kitchen/food_processor
-	icon = 'icons/Uristqwerty/food_processor_placeholder.dmi'
+	icon = 'ICON/Uristqwerty/food_processor_placeholder.dmi'
 
 
 /obj/item/kitchen/food_processor/attackby(obj/item/weapon/W as obj, mob/user as mob)

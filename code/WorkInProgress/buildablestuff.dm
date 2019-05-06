@@ -1,6 +1,6 @@
 /obj/item/weapon/photon_manipulator
 	name = "Photon Manipulator"
-	icon = 'icons/obj/device.dmi'
+	icon = 'ICON/obj/device.dmi'
 	icon_state = "shield0"
 
 

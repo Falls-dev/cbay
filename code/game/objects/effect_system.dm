@@ -8,13 +8,13 @@ would spawn and follow the beaker, even if it is carried or thrown.
 
 /obj/effects
 	name = "effects"
-	icon = 'icons/effects/effects.dmi'
+	icon = 'ICON/effects/effects.dmi'
 	mouse_opacity = 0
 	flags = TABLEPASS
 
 /obj/effects/water
 	name = "water"
-	icon = 'icons/effects/effects.dmi'
+	icon = 'ICON/effects/effects.dmi'
 	icon_state = "extinguish"
 	var/life = 15.0
 	flags = 2.0
@@ -22,7 +22,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 
 /obj/effects/smoke
 	name = "smoke"
-	icon = 'icons/effects/water.dmi'
+	icon = 'ICON/effects/water.dmi'
 	icon_state = "smoke"
 	opacity = 1
 	anchored = 0.0
@@ -76,7 +76,7 @@ steam.start() -- spawns the effect
 /////////////////////////////////////////////
 /obj/effects/steam
 	name = "steam"
-	icon = 'icons/effects/effects.dmi'
+	icon = 'ICON/effects/effects.dmi'
 	icon_state = "extinguish"
 	density = 0
 
@@ -207,7 +207,7 @@ steam.start() -- spawns the effect
 ////////////////////////////
 /obj/effects/sparkels
 	name = "sparkel"
-	icon = 'icons/obj/fireworks.dmi'//findback
+	icon = 'ICON/obj/fireworks.dmi'//findback
 	icon_state = "sparkel"
 	var/amount = 6.0
 	anchored = 1.0
@@ -304,7 +304,7 @@ steam.start() -- spawns the effect
 	mouse_opacity = 0
 	var/amount = 6.0
 	//Remove this bit to use the old smoke
-	icon = 'icons/effects/96x96.dmi'
+	icon = 'ICON/effects/96x96.dmi'
 	pixel_x = -32
 	pixel_y = -32
 
@@ -383,7 +383,7 @@ steam.start() -- spawns the effect
 	mouse_opacity = 0
 	var/amount = 6.0
 	//Remove this bit to use the old smoke
-	icon = 'icons/effects/96x96.dmi'
+	icon = 'ICON/effects/96x96.dmi'
 	pixel_x = -32
 	pixel_y = -32
 
@@ -701,7 +701,7 @@ steam.start() -- spawns the effect
 	..(loc)
 	icon_state = "[ismetal ? "m":""]foam"
 	metal = ismetal
-	playsound(src, 'sound/effects/bubbles2.ogg', 80, 1, -3)
+	playsound(src, 'OGGS/effects/bubbles2.ogg', 80, 1, -3)
 	spawn(3 + metal*3)
 		process()
 	spawn(120)
@@ -777,7 +777,7 @@ steam.start() -- spawns the effect
 
 		M.pulling = null
 		M << "\blue You slipped on the foam!"
-		playsound(src.loc, 'sound/misc/slip.ogg', 50, 1, -3)
+		playsound(src.loc, 'OGGS/misc/slip.ogg', 50, 1, -3)
 		M.stunned = 5
 		M.weakened = 2
 
@@ -834,7 +834,7 @@ steam.start() -- spawns the effect
 // dense and opaque, but easy to break
 
 /obj/foamedmetal
-	icon = 'icons/effects/effects.dmi'
+	icon = 'ICON/effects/effects.dmi'
 	icon_state = "metalfoam"
 	density = 1
 	opacity = 0 	// changed in New()

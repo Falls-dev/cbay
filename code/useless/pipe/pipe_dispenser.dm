@@ -1,6 +1,6 @@
 /obj/machinery/pipedispenser
 	name = "Pipe Dispenser"
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'ICON/obj/stationobjs.dmi'
 	icon_state = "autolathe"
 	density = 1
 	anchored = 1.0
@@ -52,7 +52,7 @@
 
 /obj/machinery/pipedispenser/disposal
 	name = "Disposal Pipe Dispenser"
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'ICON/obj/stationobjs.dmi'
 	icon_state = "autolathe"
 	density = 1
 	anchored = 1.0

@@ -1,6 +1,6 @@
 /obj/machinery/robot2/robot
 	name = "robot"
-	icon = 'icons/mob/robots.dmi'
+	icon = 'ICON/mob/robots.dmi'
 	icon_state = "standardrobot"
 	var/list/obj/machinery/robot2/chip/event/eventchips = list()
 	var/hasvoice = 0

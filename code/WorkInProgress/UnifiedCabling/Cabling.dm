@@ -81,7 +81,7 @@
 	else
 		if(Debug)
 			check_diary()
-			diary << "Deferring U.C. deletion at \[[x], [y], [z]]: #[NetworkNumber]"
+			to_log ("Deferring U.C. deletion at \[[x], [y], [z]]: #[NetworkNumber]")
 	..()
 
 
