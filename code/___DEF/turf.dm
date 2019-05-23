@@ -121,7 +121,7 @@ turf/space/hull/New()
 
 /turf/simulated/floor
 	name = "floor"
-	icon = 'ICON/turf/floors.dmi'
+	icon = 'ICON/turf/afloors.dmi'
 	icon_state = "floor"
 	thermal_conductivity = 0.040
 	heat_capacity = 225000

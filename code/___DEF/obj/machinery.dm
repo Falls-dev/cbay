@@ -451,9 +451,6 @@
 	var/brightnessgreen = 0
 	var/brightnessblue = 0
 
-#define SMESMAXCHARGELEVEL 200000
-#define SMESMAXOUTPUT 200000
-
 /obj/machinery/power/smes/magical
 	name = "magical power storage unit"
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit. Magically produces power."

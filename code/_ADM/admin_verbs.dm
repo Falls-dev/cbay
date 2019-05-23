@@ -98,7 +98,7 @@
 			/client/proc/jumptoturf,
 			/client/proc/loadmap,
 			/client/proc/loadmaphere,
-			/client/proc/modifytemperature,
+			///client/proc/modifytemperature,
 			/client/proc/SDQL_query,
 			/client/proc/SDQL2_query,
 			/client/proc/sendmob,

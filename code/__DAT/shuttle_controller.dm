@@ -7,14 +7,6 @@
 // these define the time taken for the shuttle to get to ship
 // and the time before it leaves again
 
-#define SHUTTLEARRIVETIME 600		// 10 minutes = 600 seconds
-
-#define PODLAUNCHTIME 600
-
-#define PODTRANSITTIME 150
-
-#define SHUTTLELEAVETIME 10		// 3 minutes = 180 seconds
-
 //Areas, centcom(start),station(dest),transit(deepspace)
 //Endtime holds the time that the shuttle will arrive
 //All shuttle code now uses timeleft() to get a countdown

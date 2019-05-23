@@ -52,17 +52,6 @@ var
 	else
 		return 0
 
-/*/proc/invite_loadbanfile()
-	var/DBQuery/xquery = dbcon.NewQuery("SELECT * FROM `invites`")
-	if(xquery.Execute())
-		while(xquery.NextRow())
-			var/list/row = xquery.GetRowData()
-			invite_keylist += row["ckey"]
-	log_admin("Loading invite list")
-	if (!length(invite_keylist))
-		invite_keylist=list()
-		log_admin("No people in invite list")
-*/
 /proc/invite_remove(mob/M)
 	if (!M || !M.key || !M.client) return
 	var/DBQuery/xquery = dbcon.NewQuery("DELETE FROM `invites` WHERE ckey='[M.ckey]'")

@@ -799,8 +799,8 @@ Panel: [ opened ? "<a href='byond://?src=\ref[src];opened=0'>Close</a>" : "<a hr
 			else
 				if(Debug)
 					check_diary()
-					diary <<"pulling disappeared? at [__LINE__] in mob.dm - pulling = [pulling]"
-					diary <<"REPORT THIS"
+					to_log("pulling disappeared? at [__LINE__] in mob.dm - pulling = [pulling]")
+					to_log("REPORT THIS")
 
 		/////
 		if(pulling && pulling.anchored)
