@@ -47,6 +47,18 @@
 		brightnessgreen = 2
 		brightnessblue = 2
 
+/obj/machinery/light/New()
+	..()
+	switch (dir)
+		if (SOUTH) pixel_y = 10
+		if (NORTH) pixel_y = 32
+		if (WEST)
+			pixel_y = 11
+			pixel_x = -11
+		if (EAST)
+			pixel_y = 11
+			pixel_x = 11
+
 // the smaller bulb light fixture
 
 /obj/machinery/light/small

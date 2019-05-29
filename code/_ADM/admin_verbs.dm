@@ -69,7 +69,6 @@
 
 	//Verbs for everyone super administrator and up.
 	var/list/averbs_super_admin = list(
-			/client/proc/addchange,
 			/client/proc/CarbonCopy,
 			/client/proc/clearmap,
 			/client/proc/cmd_admin_add_freeform_ai_law,

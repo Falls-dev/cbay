@@ -21,6 +21,7 @@ Do deserunt Ut cillum in ad Duis et laboris dolore do voluptate anim Excepteur m
 	icon_state = "apc0"
 	anchored = 1
 	req_access = list(access_engine_equip)
+	layer = 6
 	var/area/area
 	var/areastring = null
 	var/obj/item/weapon/cell/cell
@@ -105,10 +106,10 @@ Do deserunt Ut cillum in ad Duis et laboris dolore do voluptate anim Excepteur m
 	// this allows the APC to be embedded in a wall, yet still inside an area
 
 	tdir = dir		// to fix Vars bug
-	dir = SOUTH
+	//dir = SOUTH
 
-	pixel_x = (tdir & 3)? 0 : (tdir == 4 ? 24 : -24)
-	pixel_y = (tdir & 3)? (tdir ==1 ? 24 : -24) : 0
+	//pixel_x = (tdir & 3)? 0 : (tdir == 4 ? 24 : -24)
+	//pixel_y = (tdir & 3)? (tdir ==1 ? 24 : -24) : 0
 
 	// is starting with a power cell installed, create it and set its charge level
 	if(cell_type)

@@ -303,8 +303,9 @@ turf/space/hull/New()
 
 /turf/simulated/wall
 	name = "Wall"
-	icon = 'ICON/turf/walls.dmi'
-	icon_state = "wall0"
+	icon = 'ICON/turf/high_walls.dmi'
+	icon_state = "wall"
+	layer = 5
 	opacity = 1
 	density = 1
 	blocks_air = 1
@@ -314,9 +315,14 @@ turf/space/hull/New()
 	heat_capacity = 312500 //a little over 5 cm thick , 312500 for 1 m by 2.5 m by 0.25 m steel wall
 	var/Zombiedamage
 
+/turf/simulated/wall/New()
+	..()
+	var/icon/I = new('ICON/turf/afloors.dmi', icon_state = "floor")
+	underlays += I
+
 /turf/simulated/wall/r_wall
 	name = "Reinforced Wall"
-	icon = 'ICON/turf/walls.dmi'
+	icon = 'ICON/turf/high_walls.dmi'
 	icon_state = "r_wall"
 	opacity = 1
 	density = 1

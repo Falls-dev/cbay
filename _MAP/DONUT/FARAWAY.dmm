@@ -1,0 +1,39 @@
+"a" = (/turf/space,/area/space)
+"b" = (/turf/unsimulated/wall,/area/start)
+"c" = (/obj/landmark/start,/turf/unsimulated/wall,/area/start)
+"d" = (/turf/unsimulated/wall{icon = 'ICON/misc/fullscreen.dmi'; icon_state = "title"; name = "Terminal"},/area/start)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbcbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+dbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaa
+"}

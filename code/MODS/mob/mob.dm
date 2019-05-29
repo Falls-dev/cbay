@@ -812,6 +812,16 @@ mob/verb/turnwest()
 
 	return
 
+/proc/isliving(A)
+	if(istype(A, /mob/living))
+		return 1
+	return 0
+
+proc/isobserver(A)
+	if(istype(A, /mob/dead/observer))
+		return 1
+	return 0
+
 /obj/screen/grab/Click()
 	master:s_click(src)
 	return
@@ -1091,6 +1101,32 @@ mob/verb/turnwest()
 		else
 			DblClick()
 	return
+
+
+/obj/screen/intent
+	name = "intent"
+	icon = 'ICON/mob/screen1.dmi'
+	icon_state = "help"
+	screen_loc = ui_acti
+	var/intent = "help"
+
+/obj/screen/intent/Click(var/location, var/control, var/params)
+	var/list/P = params2list(params)
+	var/icon_x = text2num(P["icon-x"])
+	var/icon_y = text2num(P["icon-y"])
+	intent = "grab"
+	if(icon_x <= world.icon_size/2)
+		if(icon_y <= world.icon_size/2)
+			intent = "disarm"
+		else
+			intent = "harm"
+	else if(icon_y <= world.icon_size/2)
+		intent = "help"
+	update_icon()
+	usr.a_intent = intent
+
+/obj/screen/intent/proc/update_icon()
+	icon_state = "[intent]"
 
 /obj/screen/attack_hand(mob/user as mob, using)
 	user.db_click(name, using)
@@ -1555,7 +1591,7 @@ mob/verb/turnwest()
 /mob/verb/changes()
 	set name = "Changelog"
 	src.client.changes = 1
-	src.client.showchanges()
+	//src.client.showchanges()
 /*	if (client)
 		src << browse_rsc('ICON/postcardsmall.jpg')
 		src << browse_rsc('ICON/somerights20.png')

@@ -13,7 +13,8 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "_MAP\DONUT_TEST.dmm"
+#include "_MAP\DONUT\FARAWAY.dmm"
+#include "_MAP\DONUT\STATION.dmm"
 #include "CODE\mapLoader.dm"
 #include "CODE\names.dm"
 #include "CODE\nlog.dm"
@@ -423,7 +424,6 @@
 #include "CODE\GAME\verbs\who.dm"
 #include "CODE\head\bodybag.dm"
 #include "CODE\head\books.dm"
-#include "CODE\head\changelog.dm"
 #include "CODE\head\fireworks.dm"
 #include "CODE\head\medals.dm"
 #include "CODE\head\mysql.dm"
@@ -481,8 +481,8 @@
 #include "CODE\MODS\mob\living\carbon\human\ai.dm"
 #include "CODE\MODS\mob\living\carbon\human\death.dm"
 #include "CODE\MODS\mob\living\carbon\human\emote.dm"
-#include "CODE\MODS\mob\living\carbon\human\hud.dm"
 #include "CODE\MODS\mob\living\carbon\human\limited.dm"
+#include "CODE\MODS\mob\living\carbon\human\new_hud.dm"
 #include "CODE\MODS\mob\living\carbon\human\savefile.dm"
 #include "CODE\MODS\mob\living\carbon\human\say.dm"
 #include "CODE\MODS\mob\living\carbon\human\whisper.dm"
