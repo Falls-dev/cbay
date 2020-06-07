@@ -36,7 +36,7 @@ AI MODULES
 		return
 	if(istype(src,/obj/item/weapon/aiModule/freeform))
 		var/obj/item/weapon/aiModule/freeform/Mod = src //hrng
-		if(lentext(Mod.newFreeFormLaw) > 1000) //probably still too high but need discuss how long is reasonable
+		if(length(Mod.newFreeFormLaw) > 1000) //probably still too high but need discuss how long is reasonable
 			Mod.loc << "\red BUFFER OVERFLOW"
 			return
 	var/found=0
@@ -200,7 +200,7 @@ AI MODULES
 /obj/item/weapon/aiModule/freeform/transmitInstructions(var/mob/living/silicon/ai/target, var/mob/sender)
 	..()
 	var/law = "[newFreeFormLaw]"
-	if(lentext(newFreeFormLaw) > 2000)
+	if(length(newFreeFormLaw) > 2000)
 		sender << "BUFFER OVERFLOW"
 		return
 	target << law

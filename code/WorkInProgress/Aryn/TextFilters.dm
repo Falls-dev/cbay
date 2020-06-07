@@ -5,10 +5,10 @@ proc/Intoxicated(phrase) // using cp1251!
 		phrase = copytext(phrase, 1, index) + "ß" + copytext(phrase, index+1)
 		index = findtext(phrase, "ÿ")
 	var
-		leng=lentext(phrase)
-		counter=lentext(phrase)
+		leng=length(phrase)
+		counter=length(phrase)
 		newphrase="";newletter=""
-	
+
 	while(counter>=1)
 		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
 		if(rand(1,3)==3)
