@@ -90,21 +90,21 @@
 
 			  //kinda localization -- rastaf0
 			  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-			  ":ê" = "right hand",
-			  ":ä" = "left hand",
-			  ":ø" = "intercom",
-			  ":ğ" = "department",
-			  ":ñ" = "Command",
-			  ":ò" = "Science",
-			  ":ü" = "Medical",
-			  ":ó" = "Engineering",
-			  ":û" = "Security",
-			  ":ö" = "whisper",
-			  ":è" = "binary",
-			  ":ô" = "alientalk",
-			  ":å" = "Syndicate",
-			  ":â" = "Mining",
-			  ":é" = "Cargo",
+			  ":Ğº" = "right hand",
+			  ":Ğ´" = "left hand",
+			  ":Ñˆ" = "intercom",
+			  ":Ñ€" = "department",
+			  ":Ñ" = "Command",
+			  ":Ñ‚" = "Science",
+			  ":ÑŒ" = "Medical",
+			  ":Ñƒ" = "Engineering",
+			  ":Ñ‹" = "Security",
+			  ":Ñ†" = "whisper",
+			  ":Ğ¸" = "binary",
+			  ":Ñ„" = "alientalk",
+			  ":Ğµ" = "Syndicate",
+			  ":Ğ²" = "Mining",
+			  ":Ğ¹" = "Cargo",
 		)
 
 		message_mode = keys[channel_prefix]

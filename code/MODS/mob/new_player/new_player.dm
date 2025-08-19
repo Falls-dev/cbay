@@ -68,9 +68,9 @@ mob/new_player
 			//if(istester(key))
 			if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 				if(!ready)
-					output += "<a href='byond://?src=\ref[src];ready=1'>Не готов</A><BR>"
+					output += "<a href='byond://?src=\ref[src];ready=1'>РќРµ РіРѕС‚РѕРІ</A><BR>"
 				else
-					output += "<a href='byond://?src=\ref[src];ready=0'>Готов</A><BR>"
+					output += "<a href='byond://?src=\ref[src];ready=0'>Р“РѕС‚РѕРІ</A><BR>"
 			else
 				output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><BR><BR>"
 				output += "<a href='byond://?src=\ref[src];late_join=1'>Join Game!</A><BR>"

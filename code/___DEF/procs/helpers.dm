@@ -269,10 +269,10 @@
 		t = copytext(t, 1, index) + "#" + copytext(t, index+1)
 		index = findtext(t, "\t")
 
-	index = findtext(t, "ÿ")
+	index = findtext(t, "Ñ")
 	while(index)
 		t = copytext(t, 1, index) + "__255;" + copytext(t, index+1)
-		index = findtext(t, "ÿ")
+		index = findtext(t, "Ñ")
 
 	t = html_encode(t)
 
@@ -294,10 +294,10 @@
 		t = copytext(t, 1, index) + "#" + copytext(t, index+1)
 		index = findtext(t, "\t")
 
-	index = findtext(t, "ÿ")
+	index = findtext(t, "Ñ")
 	while(index)
-		t = copytext(t, 1, index) + "ß" + copytext(t, index+1)
-		index = findtext(t, "ÿ")
+		t = copytext(t, 1, index) + "Ğ¯" + copytext(t, index+1)
+		index = findtext(t, "Ñ")
 
 	t = html_encode(t)
 
@@ -313,10 +313,10 @@
 	while(index)
 		t = copytext(t, 1, index) + "#" + copytext(t, index+1)
 		index = findtext(t, "\t")
-	index = findtext(t, "ÿ")
+	index = findtext(t, "Ñ")
 	while(index)
 		t = copytext(t, 1, index) + "____255;" + copytext(t, index+1)
-		index = findtext(t, "ÿ")
+		index = findtext(t, "Ñ")
 
 	t = html_encode(t)
 
@@ -328,10 +328,10 @@
 	return t
 
 /proc/sanitize_spec(var/t)
-	var/index = findtext(t, "ÿ")
+	var/index = findtext(t, "Ñ")
 	while(index)
 		t = copytext(t, 1, index) + "____255;" + copytext(t, index+1)
-		index = findtext(t, "ÿ")
+		index = findtext(t, "Ñ")
 
 	t = html_encode(t)
 
@@ -401,8 +401,8 @@
 
 /proc/capitalize(var/t as text) // -awesome
 	var/ch = copytext(t,1,2)
-	var/lowchars[] = list("à","á","â","ã","ä","å","¸","æ","ç","è","é","ê","ë","ì","í","î","ï","ğ","ñ","ò","ó","ô","õ","ö","÷","ø","ù","ú","û","ü","ı","ş","ÿ","y","ÿ")
-	var/upchars[] =  list("À","Á","Â","Ã","Ä","Å","¨","Æ","Ç","È","É","Ê","Ë","Ì","Í","Î","Ï","Ğ","Ñ","Ò","Ó","Ô","Õ","Ö","×","Ø","Ù","Ú","Û","Ü","İ","Ş","ß","ß","ß")
+	var/lowchars[] = list("Ğ°","Ğ±","Ğ²","Ğ³","Ğ´","Ğµ","Ñ‘","Ğ¶","Ğ·","Ğ¸","Ğ¹","Ğº","Ğ»","Ğ¼","Ğ½","Ğ¾","Ğ¿","Ñ€","Ñ","Ñ‚","Ñƒ","Ñ„","Ñ…","Ñ†","Ñ‡","Ñˆ","Ñ‰","ÑŠ","Ñ‹","ÑŒ","Ñ","Ñ","Ñ","y","Ñ")
+	var/upchars[] =  list("Ğ","Ğ‘","Ğ’","Ğ“","Ğ”","Ğ•","Ğ","Ğ–","Ğ—","Ğ˜","Ğ™","Ğš","Ğ›","Ğœ","Ğ","Ğ","ĞŸ","Ğ ","Ğ¡","Ğ¢","Ğ£","Ğ¤","Ğ¥","Ğ¦","Ğ§","Ğ¨","Ğ©","Ğª","Ğ«","Ğ¬","Ğ­","Ğ®","Ğ¯","Ğ¯","Ğ¯")
 	var/n = lowchars.Find(ch)
 	if(n)
 		ch = upchars[n]
@@ -411,8 +411,8 @@
 
 /proc/de_capitalize(var/t as text) // for 'me'
 	var/ch = copytext(t,1,2)
-	var/lowchars[] = list("à","á","â","ã","ä","å","¸","æ","ç","è","é","ê","ë","ì","í","î","ï","ğ","ñ","ò","ó","ô","õ","ö","÷","ø","ù","ú","û","ü","ı","ş","ÿ","y","ÿ")
-	var/upchars[] =  list("À","Á","Â","Ã","Ä","Å","¨","Æ","Ç","È","É","Ê","Ë","Ì","Í","Î","Ï","Ğ","Ñ","Ò","Ó","Ô","Õ","Ö","×","Ø","Ù","Ú","Û","Ü","İ","Ş","ß","ß","ß")
+	var/lowchars[] = list("Ğ°","Ğ±","Ğ²","Ğ³","Ğ´","Ğµ","Ñ‘","Ğ¶","Ğ·","Ğ¸","Ğ¹","Ğº","Ğ»","Ğ¼","Ğ½","Ğ¾","Ğ¿","Ñ€","Ñ","Ñ‚","Ñƒ","Ñ„","Ñ…","Ñ†","Ñ‡","Ñˆ","Ñ‰","ÑŠ","Ñ‹","ÑŒ","Ñ","Ñ","Ñ","y","Ñ")
+	var/upchars[] =  list("Ğ","Ğ‘","Ğ’","Ğ“","Ğ”","Ğ•","Ğ","Ğ–","Ğ—","Ğ˜","Ğ™","Ğš","Ğ›","Ğœ","Ğ","Ğ","ĞŸ","Ğ ","Ğ¡","Ğ¢","Ğ£","Ğ¤","Ğ¥","Ğ¦","Ğ§","Ğ¨","Ğ©","Ğª","Ğ«","Ğ¬","Ğ­","Ğ®","Ğ¯","Ğ¯","Ğ¯")
 	var/n = upchars.Find(ch)
 	if(n)
 		ch = lowchars[n]

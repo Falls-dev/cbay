@@ -28,10 +28,10 @@ var/list/laureates = list(
 		"" = /obj/item/weapon/reagent_containers/food/drinks/drinkingglass/threemileisland,
 	),
 	"michaelshepard" = list(
-		"зачем бы тебе это понадобилось?" = /obj/item/weapon/banhammer,
+		"Р·Р°С‡РµРј Р±С‹ С‚РµР±Рµ СЌС‚Рѕ РїРѕРЅР°РґРѕР±РёР»РѕСЃСЊ?" = /obj/item/weapon/banhammer,
 	),
 	"new4life" = list(
-		"Трость" = /obj/item/weapon/cane,
+		"РўСЂРѕСЃС‚СЊ" = /obj/item/weapon/cane,
 	),
 	
 	

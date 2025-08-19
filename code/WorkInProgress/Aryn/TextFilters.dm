@@ -1,9 +1,9 @@
 proc/Intoxicated(phrase) // using cp1251!
 	phrase = html_decode(phrase)
-	var/index = findtext(phrase, "ÿ")
+	var/index = findtext(phrase, "Ñ")
 	while(index)
-		phrase = copytext(phrase, 1, index) + "ß" + copytext(phrase, index+1)
-		index = findtext(phrase, "ÿ")
+		phrase = copytext(phrase, 1, index) + "Ğ¯" + copytext(phrase, index+1)
+		index = findtext(phrase, "Ñ")
 	var
 		leng=length(phrase)
 		counter=length(phrase)
